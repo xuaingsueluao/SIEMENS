@@ -1,0 +1,17 @@
+
+.page-container[data-v-d2603837] {
+	min-height: 100vh;
+	background-color: #f5f5f5;
+}
+.page-header[data-v-d2603837] {
+	padding: 1.25rem;
+	background-color: #ffffff;
+}
+.page-title[data-v-d2603837] {
+	font-size: 1.125rem;
+	font-weight: bold;
+	color: #333;
+}
+.page-content[data-v-d2603837] {
+	padding: 0.625rem;
+}

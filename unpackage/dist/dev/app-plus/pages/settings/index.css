@@ -1,0 +1,337 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.back-btn[data-v-b4654ad9] {
+  width: 4.375rem;
+  height: 4.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-user-select: none;
+          user-select: none;
+}
+.back-btn[data-v-b4654ad9]:active {
+  opacity: 0.7;
+}
+.back-icon[data-v-b4654ad9] {
+  width: 2.375rem;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+.expandable-capsule[data-v-7d677368] {
+	position: relative;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.capsule-header[data-v-7d677368] {
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-backdrop-filter: blur(10px);
+	        backdrop-filter: blur(10px);
+	border-radius: var(--7d677368-capsuleRadius);
+	padding: 0.375rem 0.5rem;
+	min-height: 2.0625rem;	min-width: 5.625rem;	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.capsule-header.active[data-v-7d677368] {
+	background: rgba(0, 153, 153, 0.6);
+	border-color: rgba(0, 153, 153, 0.8);
+}
+.capsule-header[data-v-7d677368]:active {
+	transform: scale(0.95);
+	opacity: 0.8;
+}
+.capsule-text[data-v-7d677368] {
+	font-size: 1rem;
+	font-size: var(--7d677368-fontSize);
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 8.75rem;
+	text-align: center;
+}
+.capsule-header.active .capsule-text[data-v-7d677368] {
+	color: #ffffff;
+	font-weight: bold;
+}
+.capsule-panel[data-v-7d677368] {
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 0.85);
+	-webkit-backdrop-filter: blur(10px);
+	        backdrop-filter: blur(10px);
+	border-radius: var(--7d677368-panelRadius);
+	padding: 0.625rem 0.9375rem;
+	border: 1px solid rgba(0, 153, 153, 0.8);
+	min-width: 6.25rem;
+	z-index: 100;
+	margin-top: 0.25rem;
+}
+
+
+/*
+  三层结构：
+  背景（中灰） -> 大卡片（更浅一点） -> 胶囊（浅灰） -> 按钮（白）
+  1) 大卡片距离屏幕边缘的间距增大三倍
+  2) 胶囊与大卡片边缘（横向）间距增大两倍
+  3) 胶囊之间间距 = 胶囊到大卡片边缘间距（统一）
+*/
+[data-v-a11b3e9a]:root, .page-container[data-v-a11b3e9a] {
+	/* 页面边距 */
+	--page-gap: 1.6875rem;
+
+	/* 大卡片内边距：控制胶囊距离大卡片边缘的距离 */
+	--card-inner-gap: 1rem;
+
+	/* 胶囊之间间距 */
+	--pill-gap: 1rem;
+
+	/* 尺寸 */
+	--pill-height: 3.0625rem;
+	--pill-radius: 0.5625rem;
+
+	/* 颜色层级 */
+	--bg-gray: #dfe4e8;      /* 背景：中灰 */
+	--card-gray: #edf1f3;    /* 大卡片：更浅 */
+	--pill-gray: #eef2f4;    /* 胶囊：浅灰 */
+	--btn-white: #ffffff;    /* 按钮：白色 */
+}
+
+/* 页面容器：灰色背景 */
+.page-container[data-v-a11b3e9a] {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	background: var(--bg-gray);
+	padding: var(--page-gap);
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 返回按钮包裹器 */
+.back-btn-wrapper[data-v-a11b3e9a] {
+	position: absolute;
+	left: 1.25rem;
+	top: 0.9375rem;
+	z-index: 100;
+}
+
+/* 大卡片：更浅 + 内边距加大 */
+.settings-card[data-v-a11b3e9a] {
+	position: relative;
+	z-index: 1;
+	flex: 1;
+	min-height: 0;
+	margin-top: 4.0625rem;
+
+	background: var(--card-gray);
+	border: 0.03125rem solid rgba(0, 0, 0, 0.08);
+	border-radius: 1.25rem;
+
+	/* 这里就是“胶囊距离大卡片边缘”的控制项（两倍之后） */
+	padding: var(--card-inner-gap);
+	box-sizing: border-box;
+
+	box-shadow: 0 0.3125rem 0.8125rem rgba(0, 0, 0, 0.08);
+}
+
+/* 胶囊列表：间距与 card 内边距一致 */
+.pill-list[data-v-a11b3e9a] {
+	display: flex;
+	flex-direction: column;
+	gap: var(--pill-gap);
+}
+
+/* 胶囊：浅灰 */
+.pill-item[data-v-a11b3e9a] {
+	height: var(--pill-height);
+	padding: 0 0.75rem;
+	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+
+	border-radius: var(--pill-radius);
+	background: var(--pill-gray);
+	border: 0.03125rem solid rgba(0, 0, 0, 0.10);
+}
+
+/* 文本 */
+.pill-label[data-v-a11b3e9a] {
+	width: 6.875rem;
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: rgba(0, 0, 0, 0.42);
+	letter-spacing: 0.01563rem;
+}
+
+/* 数值 */
+.pill-value[data-v-a11b3e9a] {
+	flex: 1;
+	font-size: 0.9375rem;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.66);
+	letter-spacing: 0.01563rem;
+}
+
+/* 音源选择：按钮白色 */
+.voice-wrap[data-v-a11b3e9a] {
+	display: flex;
+	gap: 1.875rem;
+	align-items: center;
+}
+.expandable-wrapper[data-v-a11b3e9a] {
+	position: relative;
+}
+.full-width[data-v-a11b3e9a] {
+	flex: 1;
+}
+
+/* 按钮胶囊样式 */
+.voice-pill[data-v-a11b3e9a] {
+	height: 1.9375rem;
+	min-width: 5.9375rem;
+	padding: 0 0.625rem;
+	box-sizing: border-box;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 0.5rem;
+	background: var(--btn-white);
+	border: 0.03125rem solid rgba(0, 0, 0, 0.10);
+
+	font-size: 0.8125rem;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.42);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* 选中态：更清晰 */
+.voice-pill.active[data-v-a11b3e9a] {
+	background: #009999;
+	border-color: #009999;
+	color: #ffffff;
+}
+
+/* 外接设备面板 */
+.external-device-panel[data-v-a11b3e9a] {
+	padding: 0.3125rem;  
+	min-width: 12.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+/* 设备列表 */
+.device-section[data-v-a11b3e9a] {
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem;
+}
+.device-label[data-v-a11b3e9a] {
+	font-size: 0.875rem;
+	color: #009999;
+	font-weight: 600;
+	text-align: center;
+}
+.device-item[data-v-a11b3e9a] {
+	background: #ffffff;
+	border-radius: 0.375rem;
+	padding: 0.5rem 0.625rem;
+	border: 0.03125rem solid rgba(0, 153, 153, 0.3);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.device-item[data-v-a11b3e9a]:active {
+	transform: scale(0.98);
+}
+.device-item.device-selected[data-v-a11b3e9a] {
+	background: #009999;
+	border-color: #009999;
+}
+.device-name[data-v-a11b3e9a] {
+	font-size: 0.875rem;
+	color: #333;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.device-item.device-selected .device-name[data-v-a11b3e9a] {
+	color: #ffffff;
+}
+.device-tip[data-v-a11b3e9a] {
+	font-size: 0.75rem;
+	color: rgba(0, 0, 0, 0.5);
+	line-height: 1.5;
+}
+
+/* 语言选择面板 */
+.language-panel[data-v-a11b3e9a] {
+	padding: 0.3125rem;
+	min-width: 10rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.375rem;
+}
+.language-item[data-v-a11b3e9a] {
+	background: #ffffff;
+	border-radius: 0.375rem;
+	padding: 0.5rem 0.625rem;
+	border: 0.03125rem solid rgba(0, 153, 153, 0.3);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	text-align: center;
+}
+.language-item[data-v-a11b3e9a]:active {
+	transform: scale(0.98);
+}
+.language-item.language-selected[data-v-a11b3e9a] {
+	background: #009999;
+	border-color: #009999;
+}
+.language-name[data-v-a11b3e9a] {
+	font-size: 0.875rem;
+	color: #333;
+	font-weight: 600;
+	white-space: nowrap;
+}
+.language-item.language-selected .language-name[data-v-a11b3e9a] {
+	color: #ffffff;
+}

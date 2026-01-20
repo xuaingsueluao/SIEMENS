@@ -1,0 +1,12 @@
+{
+  "name": "siemens-control-app",
+  "version": "1.0.0",
+  "description": "西门子控制上位机 Android App",
+  "main": "main.js",
+  "scripts": {
+    "dev": "uni"
+  },
+  "dependencies": {
+    "vue-i18n": "^9.1.9"
+  }
+}
