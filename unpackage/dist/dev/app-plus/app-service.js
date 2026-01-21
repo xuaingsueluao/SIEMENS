@@ -5515,76 +5515,124 @@ ${codeFrame}` : message);
     ]);
   }
   const PagesRemoteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-91c9b6da"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/remote/index.vue"]]);
-  const _sfc_main$5 = {};
-  function _sfc_render$4(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
-      vue.createElementVNode("view", { class: "page-header" }, [
-        vue.createElementVNode(
-          "text",
-          { class: "page-title" },
-          vue.toDisplayString(_ctx.$t("route.title")),
-          1
-          /* TEXT */
-        )
+  const _sfc_main$5 = {
+    __name: "index",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const __returned__ = { PageHeader };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$4(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "newRoute" }, {
+      default: vue.withCtx(() => [
+        vue.createElementVNode("view", { class: "page-content" }, [
+          vue.createCommentVNode(" 新建路线内容 "),
+          vue.createElementVNode("view", { class: "content-card" }, [
+            vue.createElementVNode(
+              "text",
+              { class: "placeholder-text" },
+              vue.toDisplayString(_ctx.$t("route.title")),
+              1
+              /* TEXT */
+            )
+          ])
+        ])
       ]),
-      vue.createElementVNode("view", { class: "page-content" }, [
-        vue.createCommentVNode(" 新建路线内容 ")
-      ])
-    ]);
+      _: 1
+      /* STABLE */
+    });
   }
   const PagesRouteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__scopeId", "data-v-74397b76"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/route/index.vue"]]);
-  const _sfc_main$4 = {};
-  function _sfc_render$3(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
-      vue.createElementVNode("view", { class: "page-header" }, [
-        vue.createElementVNode(
-          "text",
-          { class: "page-title" },
-          vue.toDisplayString(_ctx.$t("face.title")),
-          1
-          /* TEXT */
-        )
+  const _sfc_main$4 = {
+    __name: "index",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const __returned__ = { PageHeader };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "faceRecognition" }, {
+      default: vue.withCtx(() => [
+        vue.createElementVNode("view", { class: "page-content" }, [
+          vue.createCommentVNode(" 人脸识别内容 "),
+          vue.createElementVNode("view", { class: "content-card" }, [
+            vue.createElementVNode(
+              "text",
+              { class: "placeholder-text" },
+              vue.toDisplayString(_ctx.$t("face.title")),
+              1
+              /* TEXT */
+            )
+          ])
+        ])
       ]),
-      vue.createElementVNode("view", { class: "page-content" }, [
-        vue.createCommentVNode(" 人脸识别内容 ")
-      ])
-    ]);
+      _: 1
+      /* STABLE */
+    });
   }
   const PagesFaceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-da7cfd14"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/face/index.vue"]]);
-  const _sfc_main$3 = {};
-  function _sfc_render$2(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
-      vue.createElementVNode("view", { class: "page-header" }, [
-        vue.createElementVNode(
-          "text",
-          { class: "page-title" },
-          vue.toDisplayString(_ctx.$t("voice.title")),
-          1
-          /* TEXT */
-        )
+  const _sfc_main$3 = {
+    __name: "index",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const __returned__ = { PageHeader };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "voiceSettings" }, {
+      default: vue.withCtx(() => [
+        vue.createElementVNode("view", { class: "page-content" }, [
+          vue.createCommentVNode(" 语音设置内容 "),
+          vue.createElementVNode("view", { class: "content-card" }, [
+            vue.createElementVNode(
+              "text",
+              { class: "placeholder-text" },
+              vue.toDisplayString(_ctx.$t("voice.title")),
+              1
+              /* TEXT */
+            )
+          ])
+        ])
       ]),
-      vue.createElementVNode("view", { class: "page-content" }, [
-        vue.createCommentVNode(" 语音设置内容 ")
-      ])
-    ]);
+      _: 1
+      /* STABLE */
+    });
   }
   const PagesVoiceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-d2603837"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/voice/index.vue"]]);
-  const _sfc_main$2 = {};
-  function _sfc_render$1(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
-      vue.createElementVNode("view", { class: "page-header" }, [
-        vue.createElementVNode(
-          "text",
-          { class: "page-title" },
-          vue.toDisplayString(_ctx.$t("mapping.title")),
-          1
-          /* TEXT */
-        )
+  const _sfc_main$2 = {
+    __name: "index",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const __returned__ = { PageHeader };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "mapping" }, {
+      default: vue.withCtx(() => [
+        vue.createElementVNode("view", { class: "page-content" }, [
+          vue.createCommentVNode(" 建图导航内容 "),
+          vue.createElementVNode("view", { class: "content-card" }, [
+            vue.createElementVNode(
+              "text",
+              { class: "placeholder-text" },
+              vue.toDisplayString(_ctx.$t("mapping.title")),
+              1
+              /* TEXT */
+            )
+          ])
+        ])
       ]),
-      vue.createElementVNode("view", { class: "page-content" }, [
-        vue.createCommentVNode(" 建图和导航内容 ")
-      ])
-    ]);
+      _: 1
+      /* STABLE */
+    });
   }
   const PagesMappingIndex = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-44e39f87"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/mapping/index.vue"]]);
   const _sfc_main$1 = {};

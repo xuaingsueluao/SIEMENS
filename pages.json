@@ -31,24 +31,28 @@
 		{
 			"path": "pages/route/index",
 			"style": {
+				"navigationStyle": "custom",
 				"navigationBarTitleText": ""
 			}
 		},
 		{
 			"path": "pages/face/index",
 			"style": {
+				"navigationStyle": "custom",
 				"navigationBarTitleText": ""
 			}
 		},
 		{
 			"path": "pages/voice/index",
 			"style": {
+				"navigationStyle": "custom",
 				"navigationBarTitleText": ""
 			}
 		},
 		{
 			"path": "pages/mapping/index",
 			"style": {
+				"navigationStyle": "custom",
 				"navigationBarTitleText": ""
 			}
 		},
