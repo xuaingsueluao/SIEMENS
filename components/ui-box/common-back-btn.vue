@@ -53,7 +53,7 @@ const handleClick = () => {
 }
 
 .back-icon {
-	width: 76rpx;
+	width: 60%; /* 84rpx，占容器的60% */
 	height: auto;
 	display: block;
 	pointer-events: none;

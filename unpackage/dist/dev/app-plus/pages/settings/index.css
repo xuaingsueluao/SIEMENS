@@ -39,11 +39,53 @@
   opacity: 0.7;
 }
 .back-icon[data-v-b4654ad9] {
-  width: 2.375rem;
+  width: 60%;
+  /* 84rpx，占容器的60% */
   height: auto;
   display: block;
   pointer-events: none;
 }
+
+.capsule-btn[data-v-97b830de] {
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-backdrop-filter: blur(10px);
+	        backdrop-filter: blur(10px);
+	border-radius: 0.9375rem;
+	padding: 0.375rem 0.5rem; 
+	min-height: 2.0625rem;	min-width: 5.625rem;	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.capsule-btn[data-v-97b830de]:active {
+	transform: scale(0.95);
+	opacity: 0.8;
+}
+.capsule-btn.active[data-v-97b830de] {
+	background: rgba(0, 153, 153, 0.6);
+	border-color: rgba(0, 153, 153, 0.8);
+}
+.capsule-btn.disabled[data-v-97b830de] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.capsule-text[data-v-97b830de] {
+	font-size: 1rem;
+	font-size: var(--97b830de-fontSize);
+	font-weight: 600;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 8.75rem;
+	text-align: center;
+}
+.capsule-btn.active .capsule-text[data-v-97b830de] {
+	color: #ffffff;
+	font-weight: bold;
+}
+
 
 .expandable-capsule[data-v-7d677368] {
 	position: relative;
@@ -103,14 +145,141 @@
 }
 
 
+.nav-status[data-v-a8e2f413] {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.status-display[data-v-a8e2f413] {
+	background: rgba(255, 255, 255, 0.3);
+	-webkit-backdrop-filter: blur(10px);
+	        backdrop-filter: blur(10px);
+	border-radius: 0.9375rem;
+	padding: 0.5625rem 1.125rem;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.25rem;
+}
+.time-section[data-v-a8e2f413] {
+	display: flex;
+	align-items: center;
+}
+.time-text[data-v-a8e2f413] {
+	font-size: 1.34375rem;
+	font-weight: bold;
+	color: #333;
+}
+.battery-section[data-v-a8e2f413] {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.15625rem;
+}
+.battery-label[data-v-a8e2f413] {
+	font-size: 0.75rem;
+	color: #666;
+}
+.battery-info[data-v-a8e2f413] {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.3125rem;
+}
+.battery-icon[data-v-a8e2f413] {
+	width: 1.875rem;
+	height: 1.125rem;
+}
+.battery-percent[data-v-a8e2f413] {
+	font-size: 1rem;
+	font-weight: bold;
+	color: #009999;
+}
+
+
+.page-header[data-v-73b0c5eb] {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+	background: #dfe4e8;
+}
+
+/* 返回按钮 - 绝对定位，不影响布局 */
+.back-btn-wrapper[data-v-73b0c5eb] {
+	position: absolute;
+	left: 1.25rem;
+	top: 0.625rem;
+	z-index: 100;
+}
+.main-content[data-v-73b0c5eb] {
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 顶部导航栏 - 与首页完全一致 */
+.top-nav[data-v-73b0c5eb] {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.875rem 0.9375rem 0.625rem 0.9375rem;
+}
+
+/* 左侧占位区域 - 与首页 Logo 宽度一致 */
+.nav-left-placeholder[data-v-73b0c5eb] {
+	flex-shrink: 0;
+	width: 5rem; /* 与首页 SIEMENS logo 宽度相当 */
+}
+.nav-buttons[data-v-73b0c5eb] {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 0.625rem;
+	flex-wrap: wrap;
+}
+
+/* 音量调节包装器 */
+.volume-wrapper[data-v-73b0c5eb] {
+	margin-left: 1.25rem;
+}
+
+/* 音量调节内容 */
+.volume-content[data-v-73b0c5eb] {
+	display: flex;  
+	flex-direction: column;
+	align-items: center;
+	gap: 0.15625rem;
+	width: 9.375rem;
+}
+.volume-content uni-slider[data-v-73b0c5eb] {
+	width: 100%;
+}
+.volume-value[data-v-73b0c5eb] {
+	font-size: 1.25rem;
+	color: #009999;
+	font-weight: bold;
+}
+
+/* 页面主体内容区域 */
+.page-body[data-v-73b0c5eb] {
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+
 /*
   三层结构：
   背景（中灰） -> 大卡片（更浅一点） -> 胶囊（浅灰） -> 按钮（白）
-  1) 大卡片距离屏幕边缘的间距增大三倍
-  2) 胶囊与大卡片边缘（横向）间距增大两倍
-  3) 胶囊之间间距 = 胶囊到大卡片边缘间距（统一）
 */
-[data-v-a11b3e9a]:root, .page-container[data-v-a11b3e9a] {
+.settings-container[data-v-a11b3e9a] {
 	/* 页面边距 */
 	--page-gap: 1.6875rem;
 
@@ -125,30 +294,16 @@
 	--pill-radius: 0.5625rem;
 
 	/* 颜色层级 */
-	--bg-gray: #dfe4e8;      /* 背景：中灰 */
 	--card-gray: #edf1f3;    /* 大卡片：更浅 */
 	--pill-gray: #eef2f4;    /* 胶囊：浅灰 */
 	--btn-white: #ffffff;    /* 按钮：白色 */
-}
-
-/* 页面容器：灰色背景 */
-.page-container[data-v-a11b3e9a] {
+	
 	width: 100%;
-	height: 100vh;
-	position: relative;
-	background: var(--bg-gray);
+	height: 100%;
 	padding: var(--page-gap);
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-}
-
-/* 返回按钮包裹器 */
-.back-btn-wrapper[data-v-a11b3e9a] {
-	position: absolute;
-	left: 1.25rem;
-	top: 0.9375rem;
-	z-index: 100;
 }
 
 /* 大卡片：更浅 + 内边距加大 */
@@ -157,13 +312,12 @@
 	z-index: 1;
 	flex: 1;
 	min-height: 0;
-	margin-top: 4.0625rem;
 
 	background: var(--card-gray);
 	border: 0.03125rem solid rgba(0, 0, 0, 0.08);
 	border-radius: 1.25rem;
 
-	/* 这里就是“胶囊距离大卡片边缘”的控制项（两倍之后） */
+	/* 这里就是"胶囊距离大卡片边缘"的控制项 */
 	padding: var(--card-inner-gap);
 	box-sizing: border-box;
 

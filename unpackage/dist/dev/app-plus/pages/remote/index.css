@@ -39,7 +39,8 @@
   opacity: 0.7;
 }
 .back-icon[data-v-b4654ad9] {
-  width: 2.375rem;
+  width: 60%;
+  /* 84rpx，占容器的60% */
   height: auto;
   display: block;
   pointer-events: none;

@@ -1,128 +1,126 @@
 <template>
-	<view class="page-container">
-		<!-- 左上角返回按钮 -->
-		<view class="back-btn-wrapper">
-			<CommonBackBtn />
-		</view>
-		
-		<!-- 外层大卡片 -->
-		<view class="settings-card">
-			<view class="pill-list">
-				<!-- 机器人型号 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.robotModel') }}：</text>
-					<text class="pill-value">G1-U2</text>
-				</view>
-
-				<!-- 语言切换 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.languageSwitch') }}：</text>
-					<view class="pill-value voice-wrap">
-						<view class="expandable-wrapper full-width">
-							<ExpandableCapsule 
-								ref="languageCapsule"
-								:text="currentLanguageName"
-								capsuleRadius="40rpx"
-								panelRadius="40rpx"
-							>
-								<view class="language-panel">
-									<view 
-										v-for="lang in supportedLanguages" 
-										:key="lang.code"
-										class="language-item"
-										:class="{ 'language-selected': locale === lang.code }"
-										@click="handleLanguageSelect(lang.code)"
-									>
-										<text class="language-name">{{ lang.nativeName }}</text>
-									</view>
-								</view>
-							</ExpandableCapsule>
-						</view>
+	<PageHeader activeKey="settings">
+		<!-- 设置页面内容 -->
+		<view class="settings-container">
+			<!-- 外层大卡片 -->
+			<view class="settings-card">
+				<view class="pill-list">
+					<!-- 机器人型号 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.robotModel') }}：</text>
+						<text class="pill-value">G1-U2</text>
 					</view>
-				</view>
 
-				<!-- 音源选择 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.audioSource') }}：</text>
-					<view class="pill-value voice-wrap">
-						<view 
-							class="voice-pill" 
-							:class="{ 'active': audioSource === 'internal' }"
-							@click="handleInternalClick"
-						>
-							{{ $t('settings.audioSourceInternal') }}
-						</view>
-						<view class="expandable-wrapper">
-							<ExpandableCapsule 
-								ref="externalCapsule"
-								:text="$t('settings.audioSourceExternal')"
-								:externalActive="audioSource === 'external'"
-								@expand="handleExternalExpand"
-								@collapse="handleExternalCollapse"
-							>
-								<view class="external-device-panel">
-									<view class="device-section">
-										<text class="device-label">可用设备</text>
+					<!-- 语言切换 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.languageSwitch') }}：</text>
+						<view class="pill-value voice-wrap">
+							<view class="expandable-wrapper full-width">
+								<ExpandableCapsule 
+									ref="languageCapsule"
+									:text="currentLanguageName"
+									capsuleRadius="40rpx"
+									panelRadius="40rpx"
+								>
+									<view class="language-panel">
 										<view 
-											class="device-item"
-											:class="{ 'device-selected': selectedDevice === 'EXA-H0001' }"
-											@click="handleDeviceSelect('EXA-H0001')"
+											v-for="lang in supportedLanguages" 
+											:key="lang.code"
+											class="language-item"
+											:class="{ 'language-selected': locale === lang.code }"
+											@click="handleLanguageSelect(lang.code)"
 										>
-											<text class="device-name">EXA-H0001</text>
+											<text class="language-name">{{ lang.nativeName }}</text>
 										</view>
 									</view>
-									<text class="device-tip">注意：使用外接音响时，音量会较大</text>
-								</view>
-							</ExpandableCapsule>
+								</ExpandableCapsule>
+							</view>
 						</view>
 					</view>
-				</view>
 
-				<!-- 设备编号 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.deviceNumber') }}：</text>
-					<text class="pill-value">xxxx xxxx</text>
-				</view>
+					<!-- 音源选择 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.audioSource') }}：</text>
+						<view class="pill-value voice-wrap">
+							<view 
+								class="voice-pill" 
+								:class="{ 'active': audioSource === 'internal' }"
+								@click="handleInternalClick"
+							>
+								{{ $t('settings.audioSourceInternal') }}
+							</view>
+							<view class="expandable-wrapper">
+								<ExpandableCapsule 
+									ref="externalCapsule"
+									:text="$t('settings.audioSourceExternal')"
+									:externalActive="audioSource === 'external'"
+									@expand="handleExternalExpand"
+									@collapse="handleExternalCollapse"
+								>
+									<view class="external-device-panel">
+										<view class="device-section">
+											<text class="device-label">可用设备</text>
+											<view 
+												class="device-item"
+												:class="{ 'device-selected': selectedDevice === 'EXA-H0001' }"
+												@click="handleDeviceSelect('EXA-H0001')"
+											>
+												<text class="device-name">EXA-H0001</text>
+											</view>
+										</view>
+										<text class="device-tip">注意：使用外接音响时，音量会较大</text>
+									</view>
+								</ExpandableCapsule>
+							</view>
+						</view>
+					</view>
 
-				<!-- 服务器IP -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.serviceIP') }}：</text>
-					<text class="pill-value">192.168.1.1</text>
-				</view>
+					<!-- 设备编号 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.deviceNumber') }}：</text>
+						<text class="pill-value">xxxx xxxx</text>
+					</view>
 
-				<!-- 部署时间 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.deploymentTime') }}：</text>
-					<text class="pill-value">2025.11.28</text>
-				</view>
+					<!-- 服务器IP -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.serviceIP') }}：</text>
+						<text class="pill-value">192.168.1.1</text>
+					</view>
 
-				<!-- WLAN -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.wlan') }}：</text>
-					<text class="pill-value">ZJU Office</text>
-				</view>
+					<!-- 部署时间 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.deploymentTime') }}：</text>
+						<text class="pill-value">2025.11.28</text>
+					</view>
 
-				<!-- 连接状态 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.connectionStatus') }}：</text>
-					<text class="pill-value">已连接</text>
-				</view>
+					<!-- WLAN -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.wlan') }}：</text>
+						<text class="pill-value">ZJU Office</text>
+					</view>
 
-				<!-- 联系我们 -->
-				<view class="pill-item">
-					<text class="pill-label">{{ $t('settings.contactUs') }}：</text>
-					<text class="pill-value">xxx公司</text>
+					<!-- 连接状态 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.connectionStatus') }}：</text>
+						<text class="pill-value">已连接</text>
+					</view>
+
+					<!-- 联系我们 -->
+					<view class="pill-item">
+						<text class="pill-label">{{ $t('settings.contactUs') }}：</text>
+						<text class="pill-value">xxx公司</text>
+					</view>
 				</view>
 			</view>
 		</view>
-	</view>
+	</PageHeader>
 </template>
 
 <script setup>
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { supportedLanguages } from '@/locale/index.js'
-import CommonBackBtn from '@/components/ui-box/common-back-btn.vue'
+import PageHeader from '@/components/layout/page-header.vue'
 import ExpandableCapsule from '@/components/ui-box/expandable-capsule.vue'
 
 const { locale } = useI18n()
@@ -201,11 +199,8 @@ const handleDeviceSelect = (deviceName) => {
 /*
   三层结构：
   背景（中灰） -> 大卡片（更浅一点） -> 胶囊（浅灰） -> 按钮（白）
-  1) 大卡片距离屏幕边缘的间距增大三倍
-  2) 胶囊与大卡片边缘（横向）间距增大两倍
-  3) 胶囊之间间距 = 胶囊到大卡片边缘间距（统一）
 */
-:root, .page-container {
+.settings-container {
 	/* 页面边距 */
 	--page-gap: 54rpx;
 
@@ -220,30 +215,16 @@ const handleDeviceSelect = (deviceName) => {
 	--pill-radius: 18rpx;
 
 	/* 颜色层级 */
-	--bg-gray: #dfe4e8;      /* 背景：中灰 */
 	--card-gray: #edf1f3;    /* 大卡片：更浅 */
 	--pill-gray: #eef2f4;    /* 胶囊：浅灰 */
 	--btn-white: #ffffff;    /* 按钮：白色 */
-}
-
-/* 页面容器：灰色背景 */
-.page-container {
+	
 	width: 100%;
-	height: 100vh;
-	position: relative;
-	background: var(--bg-gray);
+	height: 100%;
 	padding: var(--page-gap);
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: column;
-}
-
-/* 返回按钮包裹器 */
-.back-btn-wrapper {
-	position: absolute;
-	left: 40rpx;
-	top: 30rpx;
-	z-index: 100;
 }
 
 /* 大卡片：更浅 + 内边距加大 */
@@ -252,13 +233,12 @@ const handleDeviceSelect = (deviceName) => {
 	z-index: 1;
 	flex: 1;
 	min-height: 0;
-	margin-top: 130rpx;
 
 	background: var(--card-gray);
 	border: 1rpx solid rgba(0, 0, 0, 0.08);
 	border-radius: 40rpx;
 
-	/* 这里就是“胶囊距离大卡片边缘”的控制项（两倍之后） */
+	/* 这里就是"胶囊距离大卡片边缘"的控制项 */
 	padding: var(--card-inner-gap);
 	box-sizing: border-box;
 

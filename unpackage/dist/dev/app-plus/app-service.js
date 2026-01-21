@@ -42,7 +42,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$f = {
+  const _sfc_main$g = {
     __name: "welcome",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -64,7 +64,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "welcome-container" }, [
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
@@ -185,7 +185,7 @@ if (uni.restoreGlobal) {
       ])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const PagesIndexWelcome = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-c7aac77f"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/welcome.vue"]]);
+  const PagesIndexWelcome = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-c7aac77f"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/welcome.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -3704,7 +3704,7 @@ ${codeFrame}` : message);
     target.__INTLIFY__ = true;
     setDevToolsHook(target.__INTLIFY_DEVTOOLS_GLOBAL_HOOK__);
   }
-  const _sfc_main$e = {
+  const _sfc_main$f = {
     __name: "capsule-button",
     props: {
       // 按钮文字
@@ -3747,7 +3747,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -3767,8 +3767,8 @@ ${codeFrame}` : message);
       /* CLASS */
     );
   }
-  const CapsuleButton = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-97b830de"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/capsule-button.vue"]]);
-  const _sfc_main$d = {
+  const CapsuleButton = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-97b830de"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/capsule-button.vue"]]);
+  const _sfc_main$e = {
     __name: "expandable-capsule",
     props: {
       // 按钮文字
@@ -3836,7 +3836,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "expandable-capsule" }, [
       vue.createCommentVNode(" 胶囊按钮头部 "),
       vue.createElementVNode(
@@ -3866,9 +3866,9 @@ ${codeFrame}` : message);
       ])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const ExpandableCapsule = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-7d677368"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/expandable-capsule.vue"]]);
+  const ExpandableCapsule = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-7d677368"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/expandable-capsule.vue"]]);
   const _imports_0$4 = "/static/icons/home/pop-up.png";
-  const _sfc_main$c = {
+  const _sfc_main$d = {
     __name: "tip-modal",
     props: {
       // 是否显示
@@ -3931,7 +3931,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return $props.visible ? (vue.openBlock(), vue.createElementBlock("view", {
       key: 0,
       class: "tip-modal",
@@ -3995,8 +3995,8 @@ ${codeFrame}` : message);
       )
     ])) : vue.createCommentVNode("v-if", true);
   }
-  const TipModal = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-d8c96405"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/tip-modal.vue"]]);
-  const _sfc_main$b = {
+  const TipModal = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-d8c96405"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/tip-modal.vue"]]);
+  const _sfc_main$c = {
     __name: "virtual-joystick",
     props: {
       /** throttle=前后(front/back)；yaw=左右(left/right) */
@@ -4124,7 +4124,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4179,9 +4179,9 @@ ${codeFrame}` : message);
       /* STYLE, NEED_HYDRATION */
     );
   }
-  const VirtualJoystick = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-c8d8cbb8"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/virtual-joystick.vue"]]);
+  const VirtualJoystick = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-c8d8cbb8"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/virtual-joystick.vue"]]);
   const _imports_0$3 = "/static/icons/home/battery.png";
-  const _sfc_main$a = {
+  const _sfc_main$b = {
     __name: "nav-statusBYClaude",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4213,7 +4213,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "nav-status" }, [
       vue.createElementVNode("view", { class: "status-display" }, [
         vue.createElementVNode("view", { class: "time-section" }, [
@@ -4245,10 +4245,10 @@ ${codeFrame}` : message);
       ])
     ]);
   }
-  const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
+  const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
   const _imports_0$2 = "/static/icons/home/background.png";
   const _imports_1 = "/static/icons/home/location-placeholder.jpg";
-  const _sfc_main$9 = {
+  const _sfc_main$a = {
     __name: "home",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4381,7 +4381,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "home-container" }, [
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
@@ -4582,7 +4582,7 @@ ${codeFrame}` : message);
       }, null, 8, ["visible", "message", "type"])
     ]);
   }
-  const PagesIndexHome = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-760d994e"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/home.vue"]]);
+  const PagesIndexHome = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-760d994e"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/home.vue"]]);
   const zhCN = {
     // 通用
     common: {
@@ -4922,7 +4922,7 @@ ${codeFrame}` : message);
     { code: "de-DE", name: "Deutsch", nativeName: "Deutsch" }
   ];
   const _imports_0$1 = "/static/icons/general/btn_general_back.svg";
-  const _sfc_main$8 = {
+  const _sfc_main$9 = {
     __name: "common-back-btn",
     props: {
       // 是否使用默认返回行为（uni.navigateBack）
@@ -4947,7 +4947,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "back-btn",
       onClick: $setup.handleClick
@@ -4959,7 +4959,126 @@ ${codeFrame}` : message);
       })
     ]);
   }
-  const CommonBackBtn = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-b4654ad9"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/common-back-btn.vue"]]);
+  const CommonBackBtn = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-b4654ad9"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/common-back-btn.vue"]]);
+  const _sfc_main$8 = {
+    __name: "page-header",
+    props: {
+      // 当前激活的按钮 key（用于高亮显示）
+      activeKey: {
+        type: String,
+        default: ""
+      }
+    },
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const { t } = useI18n();
+      const props = __props;
+      const volume = vue.ref(50);
+      const topButtonsConfig = [
+        { key: "settings", route: "/pages/settings/index" },
+        { key: "remote", route: "/pages/remote/index" },
+        { key: "newRoute", route: "/pages/route/index" },
+        { key: "faceRecognition", route: "/pages/face/index" },
+        { key: "voiceSettings", route: "/pages/voice/index" },
+        { key: "mapping", route: "/pages/mapping/index" }
+      ];
+      const topButtons = vue.computed(
+        () => topButtonsConfig.map((btn) => ({
+          ...btn,
+          text: t(`home.${btn.key}`)
+        }))
+      );
+      const isButtonActive = (key) => {
+        return key === props.activeKey;
+      };
+      const handleButtonClick = (btn) => {
+        if (btn.route) {
+          if (btn.key === props.activeKey) {
+            return;
+          }
+          uni.navigateTo({ url: btn.route });
+        }
+      };
+      const onVolumeChange = (e) => {
+        volume.value = e.detail.value;
+        formatAppLog("log", "at components/layout/page-header.vue:121", "音量调整为:", volume.value);
+      };
+      const __returned__ = { t, props, volume, topButtonsConfig, topButtons, isButtonActive, handleButtonClick, onVolumeChange, ref: vue.ref, computed: vue.computed, get useI18n() {
+        return useI18n;
+      }, CommonBackBtn, CapsuleButton, ExpandableCapsule, NavStatusBYClaude: NavStatus };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "page-header" }, [
+      vue.createCommentVNode(" 返回按钮 - 绝对定位，不影响其他元素布局 "),
+      vue.createElementVNode("view", { class: "back-btn-wrapper" }, [
+        vue.createVNode($setup["CommonBackBtn"])
+      ]),
+      vue.createCommentVNode(" 主内容区域 "),
+      vue.createElementVNode("view", { class: "main-content" }, [
+        vue.createCommentVNode(" 顶部导航栏 - 与首页结构完全一致 "),
+        vue.createElementVNode("view", { class: "top-nav" }, [
+          vue.createCommentVNode(" 左侧占位：与首页 Logo 同宽，保持功能按钮位置一致 "),
+          vue.createElementVNode("view", { class: "nav-left-placeholder" }),
+          vue.createCommentVNode(" 中间功能按钮组 "),
+          vue.createElementVNode("view", { class: "nav-buttons" }, [
+            (vue.openBlock(true), vue.createElementBlock(
+              vue.Fragment,
+              null,
+              vue.renderList($setup.topButtons, (btn, index) => {
+                return vue.openBlock(), vue.createBlock($setup["CapsuleButton"], {
+                  key: index,
+                  text: btn.text,
+                  isActive: $setup.isButtonActive(btn.key),
+                  onClick: ($event) => $setup.handleButtonClick(btn)
+                }, null, 8, ["text", "isActive", "onClick"]);
+              }),
+              128
+              /* KEYED_FRAGMENT */
+            )),
+            vue.createCommentVNode(" 音量调节（可展开） "),
+            vue.createElementVNode("view", { class: "volume-wrapper" }, [
+              vue.createVNode($setup["ExpandableCapsule"], {
+                text: $setup.t("home.volume")
+              }, {
+                default: vue.withCtx(() => [
+                  vue.createElementVNode("view", { class: "volume-content" }, [
+                    vue.createElementVNode("slider", {
+                      value: $setup.volume,
+                      min: 0,
+                      max: 100,
+                      activeColor: "#009999",
+                      backgroundColor: "#e0e0e0",
+                      "block-size": "20",
+                      onChange: $setup.onVolumeChange
+                    }, null, 40, ["value"]),
+                    vue.createElementVNode(
+                      "text",
+                      { class: "volume-value" },
+                      vue.toDisplayString($setup.volume) + "%",
+                      1
+                      /* TEXT */
+                    )
+                  ])
+                ]),
+                _: 1
+                /* STABLE */
+              }, 8, ["text"])
+            ])
+          ]),
+          vue.createCommentVNode(" 右侧状态栏 "),
+          vue.createVNode($setup["NavStatusBYClaude"])
+        ]),
+        vue.createCommentVNode(" 页面内容插槽 "),
+        vue.createElementVNode("view", { class: "page-body" }, [
+          vue.renderSlot(_ctx.$slots, "default", {}, void 0, true)
+        ])
+      ])
+    ]);
+  }
+  const PageHeader = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-73b0c5eb"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/layout/page-header.vue"]]);
   const _sfc_main$7 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
@@ -5007,202 +5126,205 @@ ${codeFrame}` : message);
         return useI18n;
       }, get supportedLanguages() {
         return supportedLanguages;
-      }, CommonBackBtn, ExpandableCapsule };
+      }, PageHeader, ExpandableCapsule };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
   function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
-      vue.createCommentVNode(" 左上角返回按钮 "),
-      vue.createElementVNode("view", { class: "back-btn-wrapper" }, [
-        vue.createVNode($setup["CommonBackBtn"])
-      ]),
-      vue.createCommentVNode(" 外层大卡片 "),
-      vue.createElementVNode("view", { class: "settings-card" }, [
-        vue.createElementVNode("view", { class: "pill-list" }, [
-          vue.createCommentVNode(" 机器人型号 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.robotModel")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "G1-U2")
-          ]),
-          vue.createCommentVNode(" 语言切换 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.languageSwitch")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("view", { class: "pill-value voice-wrap" }, [
-              vue.createElementVNode("view", { class: "expandable-wrapper full-width" }, [
-                vue.createVNode($setup["ExpandableCapsule"], {
-                  ref: "languageCapsule",
-                  text: $setup.currentLanguageName,
-                  capsuleRadius: "40rpx",
-                  panelRadius: "40rpx"
-                }, {
-                  default: vue.withCtx(() => [
-                    vue.createElementVNode("view", { class: "language-panel" }, [
-                      (vue.openBlock(true), vue.createElementBlock(
-                        vue.Fragment,
-                        null,
-                        vue.renderList($setup.supportedLanguages, (lang) => {
-                          return vue.openBlock(), vue.createElementBlock("view", {
-                            key: lang.code,
-                            class: vue.normalizeClass(["language-item", { "language-selected": $setup.locale === lang.code }]),
-                            onClick: ($event) => $setup.handleLanguageSelect(lang.code)
-                          }, [
-                            vue.createElementVNode(
-                              "text",
-                              { class: "language-name" },
-                              vue.toDisplayString(lang.nativeName),
-                              1
-                              /* TEXT */
-                            )
-                          ], 10, ["onClick"]);
-                        }),
-                        128
-                        /* KEYED_FRAGMENT */
-                      ))
-                    ])
-                  ]),
-                  _: 1
-                  /* STABLE */
-                }, 8, ["text"])
-              ])
-            ])
-          ]),
-          vue.createCommentVNode(" 音源选择 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.audioSource")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("view", { class: "pill-value voice-wrap" }, [
-              vue.createElementVNode(
-                "view",
-                {
-                  class: vue.normalizeClass(["voice-pill", { "active": $setup.audioSource === "internal" }]),
-                  onClick: $setup.handleInternalClick
-                },
-                vue.toDisplayString(_ctx.$t("settings.audioSourceInternal")),
-                3
-                /* TEXT, CLASS */
-              ),
-              vue.createElementVNode("view", { class: "expandable-wrapper" }, [
-                vue.createVNode($setup["ExpandableCapsule"], {
-                  ref: "externalCapsule",
-                  text: _ctx.$t("settings.audioSourceExternal"),
-                  externalActive: $setup.audioSource === "external",
-                  onExpand: $setup.handleExternalExpand,
-                  onCollapse: $setup.handleExternalCollapse
-                }, {
-                  default: vue.withCtx(() => [
-                    vue.createElementVNode("view", { class: "external-device-panel" }, [
-                      vue.createElementVNode("view", { class: "device-section" }, [
-                        vue.createElementVNode("text", { class: "device-label" }, "可用设备"),
-                        vue.createElementVNode(
-                          "view",
-                          {
-                            class: vue.normalizeClass(["device-item", { "device-selected": $setup.selectedDevice === "EXA-H0001" }]),
-                            onClick: _cache[0] || (_cache[0] = ($event) => $setup.handleDeviceSelect("EXA-H0001"))
-                          },
-                          [
-                            vue.createElementVNode("text", { class: "device-name" }, "EXA-H0001")
-                          ],
-                          2
-                          /* CLASS */
-                        )
+    return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "settings" }, {
+      default: vue.withCtx(() => [
+        vue.createCommentVNode(" 设置页面内容 "),
+        vue.createElementVNode("view", { class: "settings-container" }, [
+          vue.createCommentVNode(" 外层大卡片 "),
+          vue.createElementVNode("view", { class: "settings-card" }, [
+            vue.createElementVNode("view", { class: "pill-list" }, [
+              vue.createCommentVNode(" 机器人型号 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.robotModel")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "G1-U2")
+              ]),
+              vue.createCommentVNode(" 语言切换 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.languageSwitch")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("view", { class: "pill-value voice-wrap" }, [
+                  vue.createElementVNode("view", { class: "expandable-wrapper full-width" }, [
+                    vue.createVNode($setup["ExpandableCapsule"], {
+                      ref: "languageCapsule",
+                      text: $setup.currentLanguageName,
+                      capsuleRadius: "40rpx",
+                      panelRadius: "40rpx"
+                    }, {
+                      default: vue.withCtx(() => [
+                        vue.createElementVNode("view", { class: "language-panel" }, [
+                          (vue.openBlock(true), vue.createElementBlock(
+                            vue.Fragment,
+                            null,
+                            vue.renderList($setup.supportedLanguages, (lang) => {
+                              return vue.openBlock(), vue.createElementBlock("view", {
+                                key: lang.code,
+                                class: vue.normalizeClass(["language-item", { "language-selected": $setup.locale === lang.code }]),
+                                onClick: ($event) => $setup.handleLanguageSelect(lang.code)
+                              }, [
+                                vue.createElementVNode(
+                                  "text",
+                                  { class: "language-name" },
+                                  vue.toDisplayString(lang.nativeName),
+                                  1
+                                  /* TEXT */
+                                )
+                              ], 10, ["onClick"]);
+                            }),
+                            128
+                            /* KEYED_FRAGMENT */
+                          ))
+                        ])
                       ]),
-                      vue.createElementVNode("text", { class: "device-tip" }, "注意：使用外接音响时，音量会较大")
-                    ])
-                  ]),
-                  _: 1
-                  /* STABLE */
-                }, 8, ["text", "externalActive"])
+                      _: 1
+                      /* STABLE */
+                    }, 8, ["text"])
+                  ])
+                ])
+              ]),
+              vue.createCommentVNode(" 音源选择 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.audioSource")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("view", { class: "pill-value voice-wrap" }, [
+                  vue.createElementVNode(
+                    "view",
+                    {
+                      class: vue.normalizeClass(["voice-pill", { "active": $setup.audioSource === "internal" }]),
+                      onClick: $setup.handleInternalClick
+                    },
+                    vue.toDisplayString(_ctx.$t("settings.audioSourceInternal")),
+                    3
+                    /* TEXT, CLASS */
+                  ),
+                  vue.createElementVNode("view", { class: "expandable-wrapper" }, [
+                    vue.createVNode($setup["ExpandableCapsule"], {
+                      ref: "externalCapsule",
+                      text: _ctx.$t("settings.audioSourceExternal"),
+                      externalActive: $setup.audioSource === "external",
+                      onExpand: $setup.handleExternalExpand,
+                      onCollapse: $setup.handleExternalCollapse
+                    }, {
+                      default: vue.withCtx(() => [
+                        vue.createElementVNode("view", { class: "external-device-panel" }, [
+                          vue.createElementVNode("view", { class: "device-section" }, [
+                            vue.createElementVNode("text", { class: "device-label" }, "可用设备"),
+                            vue.createElementVNode(
+                              "view",
+                              {
+                                class: vue.normalizeClass(["device-item", { "device-selected": $setup.selectedDevice === "EXA-H0001" }]),
+                                onClick: _cache[0] || (_cache[0] = ($event) => $setup.handleDeviceSelect("EXA-H0001"))
+                              },
+                              [
+                                vue.createElementVNode("text", { class: "device-name" }, "EXA-H0001")
+                              ],
+                              2
+                              /* CLASS */
+                            )
+                          ]),
+                          vue.createElementVNode("text", { class: "device-tip" }, "注意：使用外接音响时，音量会较大")
+                        ])
+                      ]),
+                      _: 1
+                      /* STABLE */
+                    }, 8, ["text", "externalActive"])
+                  ])
+                ])
+              ]),
+              vue.createCommentVNode(" 设备编号 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.deviceNumber")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "xxxx xxxx")
+              ]),
+              vue.createCommentVNode(" 服务器IP "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.serviceIP")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "192.168.1.1")
+              ]),
+              vue.createCommentVNode(" 部署时间 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.deploymentTime")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "2025.11.28")
+              ]),
+              vue.createCommentVNode(" WLAN "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.wlan")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "ZJU Office")
+              ]),
+              vue.createCommentVNode(" 连接状态 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.connectionStatus")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "已连接")
+              ]),
+              vue.createCommentVNode(" 联系我们 "),
+              vue.createElementVNode("view", { class: "pill-item" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "pill-label" },
+                  vue.toDisplayString(_ctx.$t("settings.contactUs")) + "：",
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("text", { class: "pill-value" }, "xxx公司")
               ])
             ])
-          ]),
-          vue.createCommentVNode(" 设备编号 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.deviceNumber")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "xxxx xxxx")
-          ]),
-          vue.createCommentVNode(" 服务器IP "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.serviceIP")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "192.168.1.1")
-          ]),
-          vue.createCommentVNode(" 部署时间 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.deploymentTime")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "2025.11.28")
-          ]),
-          vue.createCommentVNode(" WLAN "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.wlan")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "ZJU Office")
-          ]),
-          vue.createCommentVNode(" 连接状态 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.connectionStatus")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "已连接")
-          ]),
-          vue.createCommentVNode(" 联系我们 "),
-          vue.createElementVNode("view", { class: "pill-item" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "pill-label" },
-              vue.toDisplayString(_ctx.$t("settings.contactUs")) + "：",
-              1
-              /* TEXT */
-            ),
-            vue.createElementVNode("text", { class: "pill-value" }, "xxx公司")
           ])
         ])
-      ])
-    ]);
+      ]),
+      _: 1
+      /* STABLE */
+    });
   }
   const PagesSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-a11b3e9a"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/settings/index.vue"]]);
   const _imports_0 = "/static/icons/remote/robot-stand.png";
