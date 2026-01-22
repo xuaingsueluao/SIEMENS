@@ -1,60 +1,50 @@
 <template>
 	<PageHeader activeKey="newRoute">
 		<view class="content-container">
-			<!-- 三栏卡片区域 -->
+			<!-- 三栏区域 -->
 			<view class="cards-area">
-				<!-- 左栏 - 执行动作 -->
-				<view class="card">
-					<text class="card-title">{{ $t('routeContent.actionTitle') }}</text>
-					<view class="card-options">
-						<view 
+				<!-- 左栏 - 执行动作（大卡片包裹） -->
+				<view class="section-card">
+					<text class="section-title">{{ $t('routeContent.actionTitle') }}</text>
+					<view class="options-list">
+						<BeautifulCard 
 							v-for="action in actionList" 
 							:key="action.id"
-							class="option-btn"
-							:class="{ 'option-btn-active': selectedActionId === action.id }"
+							:text="$t(`routeContent.actions.${action.key}`)"
+							:isSelected="selectedActionId === action.id"
 							@click="handleActionSelect(action.id)"
-						>
-							<text class="option-btn-text">{{ $t(`routeContent.actions.${action.key}`) }}</text>
-						</view>
+						/>
 					</view>
 				</view>
 				
-				<!-- 中栏 - 语言 -->
-				<view class="card">
-					<text class="card-title">{{ $t('routeContent.languageTitle') }}</text>
-					<view class="card-options">
-						<view 
+				<!-- 中栏 - 语言（大卡片包裹） -->
+				<view class="section-card section-card-center">
+					<text class="section-title">{{ $t('routeContent.languageTitle') }}</text>
+					<view class="options-list options-list-center">
+						<BeautifulCard 
 							v-for="lang in languageList" 
 							:key="lang.id"
-							class="option-btn"
-							:class="{ 'option-btn-active': selectedLanguageId === lang.id }"
+							:text="$t(`routeContent.languages.${lang.key}`)"
+							:isSelected="selectedLanguageId === lang.id"
 							@click="handleLanguageSelect(lang.id)"
-						>
-							<text class="option-btn-text">{{ $t(`routeContent.languages.${lang.key}`) }}</text>
-						</view>
+						/>
 					</view>
 				</view>
 				
-				<!-- 右栏 - 声音选择 -->
-				<view class="card">
-					<text class="card-title">{{ $t('routeContent.voiceTitle') }}</text>
-					<view class="card-options">
-						<view 
+				<!-- 右栏 - 声音选择（大卡片包裹） -->
+				<view class="section-card">
+					<text class="section-title">{{ $t('routeContent.voiceTitle') }}</text>
+					<view class="options-list">
+						<BeautifulCard 
 							v-for="voice in voiceList" 
 							:key="voice.id"
-							class="voice-option"
-							:class="{ 'voice-option-active': selectedVoiceId === voice.id }"
+							:text="$t(`routeContent.voices.${voice.key}`)"
+							:isSelected="selectedVoiceId === voice.id"
+							:isPlaying="playingVoiceId === voice.id"
+							:showPlayBtn="true"
 							@click="handleVoiceSelect(voice.id)"
-						>
-							<text class="voice-option-text">{{ $t(`routeContent.voices.${voice.key}`) }}</text>
-							<view 
-								class="voice-play-btn" 
-								:class="{ 'voice-play-btn-playing': playingVoiceId === voice.id }"
-								@click.stop="handlePlayVoice(voice.id)"
-							>
-								<image class="voice-icon" src="/static/icons/general/icon_sound.svg" mode="aspectFit" />
-							</view>
-						</view>
+							@play="handlePlayVoice(voice.id)"
+						/>
 					</view>
 				</view>
 			</view>
@@ -73,6 +63,7 @@
 import { ref, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PageHeader from '@/components/layout/page-header.vue'
+import BeautifulCard from '@/components/ui-box/beautiful-card.vue'
 
 const { t } = useI18n()
 
@@ -99,9 +90,9 @@ const languageList = ref([
 // 当前选中的语言
 const selectedLanguageId = ref(1)
 
-// 声音列表（包含音频路径）
+// 声音列表（包含音频路径）//三个声音按钮暂时都指向同一个测试音频
 const voiceList = ref([
-	{ id: 1, key: 'maleA', audioSrc: '/static/icons/route/helloSir.m4a' },
+	{ id: 1, key: 'maleA', audioSrc: '/static/icons/route/helloSir.m4a' },     
 	{ id: 2, key: 'femaleB', audioSrc: '/static/icons/route/helloSir.m4a' },  // TODO: 替换为女声音频
 	{ id: 3, key: 'childC', audioSrc: '/static/icons/route/helloSir.m4a' }   // TODO: 替换为童声音频
 ])
@@ -206,147 +197,60 @@ onUnmounted(() => {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
-	padding: 30rpx 50rpx 50rpx 50rpx;
+	padding: 80rpx 160rpx;
 	box-sizing: border-box;
 }
 
-/* 三栏卡片区域 */
+/* 三栏区域 - 间距增大4倍 */
 .cards-area {
 	flex: 1;
 	display: flex;
 	flex-direction: row;
-	gap: 40rpx;
+	gap: 160rpx;
 }
 
-/* 卡片 */
-.card {
+/* 大卡片容器 */
+.section-card {
 	flex: 1;
 	background: #edf1f3;
 	border-radius: 40rpx;
-	padding: 40rpx 30rpx;
+	padding: 40rpx 36rpx;
 	display: flex;
 	flex-direction: column;
-	gap: 30rpx;
 }
 
-.card-title {
+.section-card-center {
+	flex: 0.6;
+	align-items: center;
+}
+
+/* 通用标题 */
+.section-title {
 	font-size: 32rpx;
 	font-weight: 600;
 	color: #333;
+	margin-bottom: 30rpx;
 	text-align: center;
 }
 
-.card-options {
+/* ==================== 选项列表 ==================== */
+.options-list {
+	flex: 1;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	gap: 20rpx;
 }
 
-/* 选项按钮 */
-.option-btn {
-	background: #ffffff;
-	border-radius: 30rpx;
-	padding: 24rpx 30rpx;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.2s ease;
+.options-list-center {
+	width: 100%;
 }
 
-.option-btn:active {
-	opacity: 0.8;
-}
-
-.option-btn-active {
-	background: #009999;
-}
-
-.option-btn-text {
-	font-size: 28rpx;
-	color: #333;
-}
-
-.option-btn-active .option-btn-text {
-	color: #ffffff;
-	font-weight: 600;
-}
-
-/* 声音选项（带试听按钮） */
-.voice-option {
-	background: #ffffff;
-	border-radius: 30rpx;
-	padding: 24rpx 30rpx;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: space-between;
-	transition: all 0.2s ease;
-}
-
-.voice-option:active {
-	opacity: 0.8;
-}
-
-.voice-option-active {
-	background: #009999;
-}
-
-.voice-option-text {
-	font-size: 28rpx;
-	color: #333;
-}
-
-.voice-option-active .voice-option-text {
-	color: #ffffff;
-	font-weight: 600;
-}
-
-.voice-play-btn {
-	width: 50rpx;
-	height: 50rpx;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	transition: all 0.2s ease;
-}
-
-.voice-play-btn:active {
-	opacity: 0.7;
-}
-
-.voice-play-btn-playing {
-	background: rgba(0, 153, 153, 0.2);
-	animation: pulse 1s ease-in-out infinite;
-}
-
-@keyframes pulse {
-	0%, 100% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.1);
-	}
-}
-
-.voice-icon {
-	width: 36rpx;
-	height: 36rpx;
-}
-
-.voice-play-btn-playing .voice-icon {
-	filter: invert(38%) sepia(93%) saturate(1000%) hue-rotate(157deg) brightness(92%) contrast(101%);
-}
-
-.voice-option-active .voice-icon {
-	filter: brightness(0) invert(1);
-}
-
-/* 底部保存按钮区域 */
+/* ==================== 底部保存按钮 ==================== */
 .save-btn-area {
 	display: flex;
 	justify-content: flex-end;
-	padding-top: 30rpx;
+	padding-top: 60rpx;
 }
 
 .save-btn {

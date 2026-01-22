@@ -42,7 +42,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$h = {
+  const _sfc_main$i = {
     __name: "welcome",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -64,7 +64,7 @@ if (uni.restoreGlobal) {
       return __returned__;
     }
   };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "welcome-container" }, [
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
@@ -185,7 +185,7 @@ if (uni.restoreGlobal) {
       ])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const PagesIndexWelcome = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-c7aac77f"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/welcome.vue"]]);
+  const PagesIndexWelcome = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$h], ["__scopeId", "data-v-c7aac77f"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/welcome.vue"]]);
   function formatAppLog(type, filename, ...args) {
     if (uni.__log__) {
       uni.__log__(type, filename, ...args);
@@ -3704,7 +3704,7 @@ ${codeFrame}` : message);
     target.__INTLIFY__ = true;
     setDevToolsHook(target.__INTLIFY_DEVTOOLS_GLOBAL_HOOK__);
   }
-  const _sfc_main$g = {
+  const _sfc_main$h = {
     __name: "capsule-button",
     props: {
       // 按钮文字
@@ -3747,7 +3747,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -3767,8 +3767,8 @@ ${codeFrame}` : message);
       /* CLASS */
     );
   }
-  const CapsuleButton = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-97b830de"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/capsule-button.vue"]]);
-  const _sfc_main$f = {
+  const CapsuleButton = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$g], ["__scopeId", "data-v-97b830de"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/capsule-button.vue"]]);
+  const _sfc_main$g = {
     __name: "expandable-capsule",
     props: {
       // 按钮文字
@@ -3836,7 +3836,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "expandable-capsule" }, [
       vue.createCommentVNode(" 胶囊按钮头部 "),
       vue.createElementVNode(
@@ -3866,9 +3866,9 @@ ${codeFrame}` : message);
       ])) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const ExpandableCapsule = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-7d677368"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/expandable-capsule.vue"]]);
+  const ExpandableCapsule = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-7d677368"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/expandable-capsule.vue"]]);
   const _imports_0$6 = "/static/icons/home/pop-up.png";
-  const _sfc_main$e = {
+  const _sfc_main$f = {
     __name: "tip-modal",
     props: {
       // 是否显示
@@ -3931,7 +3931,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return $props.visible ? (vue.openBlock(), vue.createElementBlock("view", {
       key: 0,
       class: "tip-modal",
@@ -3995,8 +3995,8 @@ ${codeFrame}` : message);
       )
     ])) : vue.createCommentVNode("v-if", true);
   }
-  const TipModal = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-d8c96405"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/tip-modal.vue"]]);
-  const _sfc_main$d = {
+  const TipModal = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$e], ["__scopeId", "data-v-d8c96405"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/tip-modal.vue"]]);
+  const _sfc_main$e = {
     __name: "virtual-joystick",
     props: {
       /** throttle=前后(front/back)；yaw=左右(left/right) */
@@ -4124,7 +4124,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -4179,9 +4179,9 @@ ${codeFrame}` : message);
       /* STYLE, NEED_HYDRATION */
     );
   }
-  const VirtualJoystick = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-c8d8cbb8"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/virtual-joystick.vue"]]);
+  const VirtualJoystick = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-c8d8cbb8"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/virtual-joystick.vue"]]);
   const _imports_0$5 = "/static/icons/home/battery.png";
-  const _sfc_main$c = {
+  const _sfc_main$d = {
     __name: "nav-statusBYClaude",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4213,7 +4213,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "nav-status" }, [
       vue.createElementVNode("view", { class: "status-display" }, [
         vue.createElementVNode("view", { class: "time-section" }, [
@@ -4245,10 +4245,10 @@ ${codeFrame}` : message);
       ])
     ]);
   }
-  const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
+  const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
   const _imports_0$4 = "/static/icons/home/background.png";
   const _imports_1 = "/static/icons/home/location-placeholder.jpg";
-  const _sfc_main$b = {
+  const _sfc_main$c = {
     __name: "home",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -4381,7 +4381,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "home-container" }, [
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
@@ -4582,7 +4582,7 @@ ${codeFrame}` : message);
       }, null, 8, ["visible", "message", "type"])
     ]);
   }
-  const PagesIndexHome = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-760d994e"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/home.vue"]]);
+  const PagesIndexHome = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["render", _sfc_render$b], ["__scopeId", "data-v-760d994e"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/index/home.vue"]]);
   const zhCN = {
     // 通用
     common: {
@@ -5018,7 +5018,7 @@ ${codeFrame}` : message);
     { code: "de-DE", name: "Deutsch", nativeName: "Deutsch" }
   ];
   const _imports_0$3 = "/static/icons/general/btn_general_back.svg";
-  const _sfc_main$a = {
+  const _sfc_main$b = {
     __name: "common-back-btn",
     props: {
       // 是否使用默认返回行为（uni.navigateBack）
@@ -5043,7 +5043,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       class: "back-btn",
       onClick: $setup.handleClick
@@ -5055,8 +5055,8 @@ ${codeFrame}` : message);
       })
     ]);
   }
-  const CommonBackBtn = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-b4654ad9"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/common-back-btn.vue"]]);
-  const _sfc_main$9 = {
+  const CommonBackBtn = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$a], ["__scopeId", "data-v-b4654ad9"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/common-back-btn.vue"]]);
+  const _sfc_main$a = {
     __name: "page-header",
     props: {
       // 当前激活的按钮 key（用于高亮显示）
@@ -5106,7 +5106,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "page-header" }, [
       vue.createCommentVNode(" 返回按钮 - 绝对定位，不影响其他元素布局 "),
       vue.createElementVNode("view", { class: "back-btn-wrapper" }, [
@@ -5174,8 +5174,8 @@ ${codeFrame}` : message);
       ])
     ]);
   }
-  const PageHeader = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-73b0c5eb"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/layout/page-header.vue"]]);
-  const _sfc_main$8 = {
+  const PageHeader = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$9], ["__scopeId", "data-v-73b0c5eb"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/layout/page-header.vue"]]);
+  const _sfc_main$9 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -5227,7 +5227,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "settings" }, {
       default: vue.withCtx(() => [
         vue.createCommentVNode(" 设置页面内容 "),
@@ -5422,9 +5422,9 @@ ${codeFrame}` : message);
       /* STABLE */
     });
   }
-  const PagesSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-a11b3e9a"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/settings/index.vue"]]);
+  const PagesSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-a11b3e9a"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/settings/index.vue"]]);
   const _imports_0$2 = "/static/icons/remote/robot-stand.png";
-  const _sfc_main$7 = {
+  const _sfc_main$8 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -5460,7 +5460,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "page-container" }, [
       vue.createCommentVNode(" 左上角返回按钮 "),
       vue.createElementVNode("view", { class: "back-btn-wrapper" }, [
@@ -5610,9 +5610,9 @@ ${codeFrame}` : message);
       ])
     ]);
   }
-  const PagesRemoteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-91c9b6da"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/remote/index.vue"]]);
+  const PagesRemoteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-91c9b6da"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/remote/index.vue"]]);
   const _imports_0$1 = "/static/icons/route/background.jpg";
-  const _sfc_main$6 = {
+  const _sfc_main$7 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
@@ -5662,7 +5662,7 @@ ${codeFrame}` : message);
       return __returned__;
     }
   };
-  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "newRoute" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "route-container" }, [
@@ -5815,8 +5815,108 @@ ${codeFrame}` : message);
       /* STABLE */
     });
   }
-  const PagesRouteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-74397b76"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/route/index.vue"]]);
+  const PagesRouteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-74397b76"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/route/index.vue"]]);
   const _imports_0 = "/static/icons/general/icon_sound.svg";
+  const _sfc_main$6 = {
+    __name: "beautiful-card",
+    props: {
+      // 显示文字
+      text: {
+        type: String,
+        required: true
+      },
+      // 是否选中状态（浮起+阴影）
+      isSelected: {
+        type: Boolean,
+        default: false
+      },
+      // 是否播放中（呼吸动画）
+      isPlaying: {
+        type: Boolean,
+        default: false
+      },
+      // 是否显示播放按钮
+      showPlayBtn: {
+        type: Boolean,
+        default: false
+      },
+      // 是否禁用
+      disabled: {
+        type: Boolean,
+        default: false
+      }
+    },
+    emits: ["click", "play"],
+    setup(__props, { expose: __expose, emit: __emit }) {
+      __expose();
+      const props = __props;
+      const emit = __emit;
+      const handleClick = () => {
+        if (!props.disabled) {
+          emit("click");
+        }
+      };
+      const handlePlay = () => {
+        if (!props.disabled) {
+          emit("play");
+        }
+      };
+      const __returned__ = { props, emit, handleClick, handlePlay };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock(
+      "view",
+      {
+        class: vue.normalizeClass(["beautiful-card", {
+          "beautiful-card-selected": $props.isSelected,
+          "beautiful-card-playing": $props.isPlaying,
+          "beautiful-card-disabled": $props.disabled
+        }]),
+        onClick: $setup.handleClick
+      },
+      [
+        vue.createElementVNode("view", { class: "card-content" }, [
+          vue.createElementVNode(
+            "text",
+            { class: "card-text" },
+            vue.toDisplayString($props.text),
+            1
+            /* TEXT */
+          )
+        ]),
+        vue.createCommentVNode(" 右侧播放按钮（可选） "),
+        $props.showPlayBtn ? (vue.openBlock(), vue.createElementBlock(
+          "view",
+          {
+            key: 0,
+            class: vue.normalizeClass(["play-btn", { "play-btn-active": $props.isPlaying }]),
+            onClick: vue.withModifiers($setup.handlePlay, ["stop"])
+          },
+          [
+            vue.createElementVNode(
+              "image",
+              {
+                class: vue.normalizeClass(["play-icon", { "play-icon-active": $props.isPlaying }]),
+                src: _imports_0,
+                mode: "aspectFit"
+              },
+              null,
+              2
+              /* CLASS */
+            )
+          ],
+          2
+          /* CLASS */
+        )) : vue.createCommentVNode("v-if", true)
+      ],
+      2
+      /* CLASS */
+    );
+  }
+  const BeautifulCard = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-65026364"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/beautiful-card.vue"]]);
   const _sfc_main$5 = {
     __name: "content",
     setup(__props, { expose: __expose }) {
@@ -5859,7 +5959,7 @@ ${codeFrame}` : message);
       const handlePlayVoice = (id) => {
         const voice = voiceList.value.find((v) => v.id === id);
         if (!voice || !voice.audioSrc) {
-          formatAppLog("warn", "at pages/route/content.vue:136", "未找到音频文件");
+          formatAppLog("warn", "at pages/route/content.vue:127", "未找到音频文件");
           return;
         }
         if (playingVoiceId.value === id && audioContext.value) {
@@ -5877,7 +5977,7 @@ ${codeFrame}` : message);
           playingVoiceId.value = null;
         });
         audioContext.value.onError((err) => {
-          formatAppLog("error", "at pages/route/content.vue:164", "音频播放错误:", err);
+          formatAppLog("error", "at pages/route/content.vue:155", "音频播放错误:", err);
           playingVoiceId.value = null;
           uni.showToast({
             title: "播放失败",
@@ -5892,7 +5992,7 @@ ${codeFrame}` : message);
           audioContext.value.stop();
           audioContext.value.destroy();
         }
-        formatAppLog("log", "at pages/route/content.vue:185", "保存讲解内容配置", {
+        formatAppLog("log", "at pages/route/content.vue:176", "保存讲解内容配置", {
           actionId: selectedActionId.value,
           languageId: selectedLanguageId.value,
           voiceId: selectedVoiceId.value
@@ -5908,7 +6008,7 @@ ${codeFrame}` : message);
       });
       const __returned__ = { t, actionList, selectedActionId, languageList, selectedLanguageId, voiceList, selectedVoiceId, audioContext, playingVoiceId, handleActionSelect, handleLanguageSelect, handleVoiceSelect, handlePlayVoice, handleSave, ref: vue.ref, onUnmounted: vue.onUnmounted, get useI18n() {
         return useI18n;
-      }, PageHeader };
+      }, PageHeader, BeautifulCard };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -5917,111 +6017,83 @@ ${codeFrame}` : message);
     return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "newRoute" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "content-container" }, [
-          vue.createCommentVNode(" 三栏卡片区域 "),
+          vue.createCommentVNode(" 三栏区域 "),
           vue.createElementVNode("view", { class: "cards-area" }, [
-            vue.createCommentVNode(" 左栏 - 执行动作 "),
-            vue.createElementVNode("view", { class: "card" }, [
+            vue.createCommentVNode(" 左栏 - 执行动作（大卡片包裹） "),
+            vue.createElementVNode("view", { class: "section-card" }, [
               vue.createElementVNode(
                 "text",
-                { class: "card-title" },
+                { class: "section-title" },
                 vue.toDisplayString(_ctx.$t("routeContent.actionTitle")),
                 1
                 /* TEXT */
               ),
-              vue.createElementVNode("view", { class: "card-options" }, [
+              vue.createElementVNode("view", { class: "options-list" }, [
                 (vue.openBlock(true), vue.createElementBlock(
                   vue.Fragment,
                   null,
                   vue.renderList($setup.actionList, (action) => {
-                    return vue.openBlock(), vue.createElementBlock("view", {
+                    return vue.openBlock(), vue.createBlock($setup["BeautifulCard"], {
                       key: action.id,
-                      class: vue.normalizeClass(["option-btn", { "option-btn-active": $setup.selectedActionId === action.id }]),
+                      text: _ctx.$t(`routeContent.actions.${action.key}`),
+                      isSelected: $setup.selectedActionId === action.id,
                       onClick: ($event) => $setup.handleActionSelect(action.id)
-                    }, [
-                      vue.createElementVNode(
-                        "text",
-                        { class: "option-btn-text" },
-                        vue.toDisplayString(_ctx.$t(`routeContent.actions.${action.key}`)),
-                        1
-                        /* TEXT */
-                      )
-                    ], 10, ["onClick"]);
+                    }, null, 8, ["text", "isSelected", "onClick"]);
                   }),
                   128
                   /* KEYED_FRAGMENT */
                 ))
               ])
             ]),
-            vue.createCommentVNode(" 中栏 - 语言 "),
-            vue.createElementVNode("view", { class: "card" }, [
+            vue.createCommentVNode(" 中栏 - 语言（大卡片包裹） "),
+            vue.createElementVNode("view", { class: "section-card section-card-center" }, [
               vue.createElementVNode(
                 "text",
-                { class: "card-title" },
+                { class: "section-title" },
                 vue.toDisplayString(_ctx.$t("routeContent.languageTitle")),
                 1
                 /* TEXT */
               ),
-              vue.createElementVNode("view", { class: "card-options" }, [
+              vue.createElementVNode("view", { class: "options-list options-list-center" }, [
                 (vue.openBlock(true), vue.createElementBlock(
                   vue.Fragment,
                   null,
                   vue.renderList($setup.languageList, (lang) => {
-                    return vue.openBlock(), vue.createElementBlock("view", {
+                    return vue.openBlock(), vue.createBlock($setup["BeautifulCard"], {
                       key: lang.id,
-                      class: vue.normalizeClass(["option-btn", { "option-btn-active": $setup.selectedLanguageId === lang.id }]),
+                      text: _ctx.$t(`routeContent.languages.${lang.key}`),
+                      isSelected: $setup.selectedLanguageId === lang.id,
                       onClick: ($event) => $setup.handleLanguageSelect(lang.id)
-                    }, [
-                      vue.createElementVNode(
-                        "text",
-                        { class: "option-btn-text" },
-                        vue.toDisplayString(_ctx.$t(`routeContent.languages.${lang.key}`)),
-                        1
-                        /* TEXT */
-                      )
-                    ], 10, ["onClick"]);
+                    }, null, 8, ["text", "isSelected", "onClick"]);
                   }),
                   128
                   /* KEYED_FRAGMENT */
                 ))
               ])
             ]),
-            vue.createCommentVNode(" 右栏 - 声音选择 "),
-            vue.createElementVNode("view", { class: "card" }, [
+            vue.createCommentVNode(" 右栏 - 声音选择（大卡片包裹） "),
+            vue.createElementVNode("view", { class: "section-card" }, [
               vue.createElementVNode(
                 "text",
-                { class: "card-title" },
+                { class: "section-title" },
                 vue.toDisplayString(_ctx.$t("routeContent.voiceTitle")),
                 1
                 /* TEXT */
               ),
-              vue.createElementVNode("view", { class: "card-options" }, [
+              vue.createElementVNode("view", { class: "options-list" }, [
                 (vue.openBlock(true), vue.createElementBlock(
                   vue.Fragment,
                   null,
                   vue.renderList($setup.voiceList, (voice) => {
-                    return vue.openBlock(), vue.createElementBlock("view", {
+                    return vue.openBlock(), vue.createBlock($setup["BeautifulCard"], {
                       key: voice.id,
-                      class: vue.normalizeClass(["voice-option", { "voice-option-active": $setup.selectedVoiceId === voice.id }]),
-                      onClick: ($event) => $setup.handleVoiceSelect(voice.id)
-                    }, [
-                      vue.createElementVNode(
-                        "text",
-                        { class: "voice-option-text" },
-                        vue.toDisplayString(_ctx.$t(`routeContent.voices.${voice.key}`)),
-                        1
-                        /* TEXT */
-                      ),
-                      vue.createElementVNode("view", {
-                        class: vue.normalizeClass(["voice-play-btn", { "voice-play-btn-playing": $setup.playingVoiceId === voice.id }]),
-                        onClick: vue.withModifiers(($event) => $setup.handlePlayVoice(voice.id), ["stop"])
-                      }, [
-                        vue.createElementVNode("image", {
-                          class: "voice-icon",
-                          src: _imports_0,
-                          mode: "aspectFit"
-                        })
-                      ], 10, ["onClick"])
-                    ], 10, ["onClick"]);
+                      text: _ctx.$t(`routeContent.voices.${voice.key}`),
+                      isSelected: $setup.selectedVoiceId === voice.id,
+                      isPlaying: $setup.playingVoiceId === voice.id,
+                      showPlayBtn: true,
+                      onClick: ($event) => $setup.handleVoiceSelect(voice.id),
+                      onPlay: ($event) => $setup.handlePlayVoice(voice.id)
+                    }, null, 8, ["text", "isSelected", "isPlaying", "onClick", "onPlay"]);
                   }),
                   128
                   /* KEYED_FRAGMENT */

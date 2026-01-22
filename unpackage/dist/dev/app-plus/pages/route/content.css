@@ -275,111 +275,111 @@
 }
 
 
-.content-container[data-v-6a1124c8] {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	padding: 0.9375rem 1.5625rem 1.5625rem 1.5625rem;
-	box-sizing: border-box;
-}
-
-/* 三栏卡片区域 */
-.cards-area[data-v-6a1124c8] {
-	flex: 1;
-	display: flex;
-	flex-direction: row;
-	gap: 1.25rem;
-}
-
-/* 卡片 */
-.card[data-v-6a1124c8] {
-	flex: 1;
-	background: #edf1f3;
-	border-radius: 1.25rem;
-	padding: 1.25rem 0.9375rem;
-	display: flex;
-	flex-direction: column;
-	gap: 0.9375rem;
-}
-.card-title[data-v-6a1124c8] {
-	font-size: 1rem;
-	font-weight: 600;
-	color: #333;
-	text-align: center;
-}
-.card-options[data-v-6a1124c8] {
-	display: flex;
-	flex-direction: column;
-	gap: 0.625rem;
-}
-
-/* 选项按钮 */
-.option-btn[data-v-6a1124c8] {
+.beautiful-card[data-v-65026364] {
 	background: #ffffff;
-	border-radius: 0.9375rem;
-	padding: 0.75rem 0.9375rem;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: all 0.2s ease;
-}
-.option-btn[data-v-6a1124c8]:active {
-	opacity: 0.8;
-}
-.option-btn-active[data-v-6a1124c8] {
-	background: #009999;
-}
-.option-btn-text[data-v-6a1124c8] {
-	font-size: 0.875rem;
-	color: #333;
-}
-.option-btn-active .option-btn-text[data-v-6a1124c8] {
-	color: #ffffff;
-	font-weight: 600;
-}
-
-/* 声音选项（带试听按钮） */
-.voice-option[data-v-6a1124c8] {
-	background: #ffffff;
-	border-radius: 0.9375rem;
-	padding: 0.75rem 0.9375rem;
+	border-radius: 0.75rem;
+	padding: 0.875rem 0.9375rem;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	transition: all 0.2s ease;
+	transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+	border: 0.0625rem solid transparent;
+	position: relative;
+	cursor: pointer;
 }
-.voice-option[data-v-6a1124c8]:active {
-	opacity: 0.8;
+
+/* 点击反馈 */
+.beautiful-card[data-v-65026364]:active {
+	transform: scale(0.98);
 }
-.voice-option-active[data-v-6a1124c8] {
-	background: #009999;
+
+/* ==================== 选中态 - 浮起 + 边框 + 阴影 ==================== */
+.beautiful-card-selected[data-v-65026364] {
+	border-color: #009999;
+	background: #ffffff;
+	box-shadow: 0 0.25rem 0.9375rem rgba(0, 153, 153, 0.25);
+	transform: translateY(-0.125rem);
 }
-.voice-option-text[data-v-6a1124c8] {
+.beautiful-card-selected[data-v-65026364]:active {
+	transform: translateY(-0.0625rem) scale(0.99);
+}
+
+/* ==================== 播放态 - 边框呼吸动画 ==================== */
+.beautiful-card-playing[data-v-65026364] {
+	border-color: #009999;
+	animation: borderPulse-65026364 1.5s ease-in-out infinite;
+}
+@keyframes borderPulse-65026364 {
+0%, 100% {
+		box-shadow: 0 0 0 0 rgba(0, 153, 153, 0.4);
+}
+50% {
+		box-shadow: 0 0 0 0.25rem rgba(0, 153, 153, 0.1);
+}
+}
+
+/* 选中+播放态同时存在时，保持浮起效果 */
+.beautiful-card-selected.beautiful-card-playing[data-v-65026364] {
+	transform: translateY(-0.125rem);
+	animation: borderPulseWithShadow-65026364 1.5s ease-in-out infinite;
+}
+@keyframes borderPulseWithShadow-65026364 {
+0%, 100% {
+		box-shadow: 0 0.25rem 0.9375rem rgba(0, 153, 153, 0.25), 0 0 0 0 rgba(0, 153, 153, 0.4);
+}
+50% {
+		box-shadow: 0 0.25rem 0.9375rem rgba(0, 153, 153, 0.25), 0 0 0 0.25rem rgba(0, 153, 153, 0.1);
+}
+}
+
+/* ==================== 禁用态 ==================== */
+.beautiful-card-disabled[data-v-65026364] {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+.beautiful-card-disabled[data-v-65026364]:active {
+	transform: none;
+}
+
+/* ==================== 内容区域 ==================== */
+.card-content[data-v-65026364] {
+	flex: 1;
+}
+.card-text[data-v-65026364] {
 	font-size: 0.875rem;
 	color: #333;
+	font-weight: 500;
+	transition: all 0.2s ease;
 }
-.voice-option-active .voice-option-text[data-v-6a1124c8] {
-	color: #ffffff;
+.beautiful-card-selected .card-text[data-v-65026364] {
+	color: #009999;
 	font-weight: 600;
 }
-.voice-play-btn[data-v-6a1124c8] {
-	width: 1.5625rem;
-	height: 1.5625rem;
+
+/* ==================== 播放按钮 ==================== */
+.play-btn[data-v-65026364] {
+	width: 2rem;
+	height: 2rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
+	background: #f5f5f5;
 	transition: all 0.2s ease;
+	margin-left: 0.625rem;
 }
-.voice-play-btn[data-v-6a1124c8]:active {
-	opacity: 0.7;
+.play-btn[data-v-65026364]:active {
+	transform: scale(0.9);
+	background: #e8e8e8;
 }
-.voice-play-btn-playing[data-v-6a1124c8] {
-	background: rgba(0, 153, 153, 0.2);
-	animation: pulse-6a1124c8 1s ease-in-out infinite;
+
+/* 播放中按钮状态 */
+.play-btn-active[data-v-65026364] {
+	background: #009999;
+	animation: playPulse-65026364 1s ease-in-out infinite;
 }
-@keyframes pulse-6a1124c8 {
+@keyframes playPulse-65026364 {
 0%, 100% {
 		transform: scale(1);
 }
@@ -387,22 +387,72 @@
 		transform: scale(1.1);
 }
 }
-.voice-icon[data-v-6a1124c8] {
+.play-icon[data-v-65026364] {
 	width: 1.125rem;
 	height: 1.125rem;
+	transition: all 0.2s ease;
 }
-.voice-play-btn-playing .voice-icon[data-v-6a1124c8] {
-	filter: invert(38%) sepia(93%) saturate(1000%) hue-rotate(157deg) brightness(92%) contrast(101%);
-}
-.voice-option-active .voice-icon[data-v-6a1124c8] {
+.play-icon-active[data-v-65026364] {
 	filter: brightness(0) invert(1);
 }
 
-/* 底部保存按钮区域 */
+
+.content-container[data-v-6a1124c8] {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding: 2.5rem 5rem;
+	box-sizing: border-box;
+}
+
+/* 三栏区域 - 间距增大4倍 */
+.cards-area[data-v-6a1124c8] {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	gap: 5rem;
+}
+
+/* 大卡片容器 */
+.section-card[data-v-6a1124c8] {
+	flex: 1;
+	background: #edf1f3;
+	border-radius: 1.25rem;
+	padding: 1.25rem 1.125rem;
+	display: flex;
+	flex-direction: column;
+}
+.section-card-center[data-v-6a1124c8] {
+	flex: 0.6;
+	align-items: center;
+}
+
+/* 通用标题 */
+.section-title[data-v-6a1124c8] {
+	font-size: 1rem;
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 0.9375rem;
+	text-align: center;
+}
+
+/* ==================== 选项列表 ==================== */
+.options-list[data-v-6a1124c8] {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.625rem;
+}
+.options-list-center[data-v-6a1124c8] {
+	width: 100%;
+}
+
+/* ==================== 底部保存按钮 ==================== */
 .save-btn-area[data-v-6a1124c8] {
 	display: flex;
 	justify-content: flex-end;
-	padding-top: 0.9375rem;
+	padding-top: 1.875rem;
 }
 .save-btn[data-v-6a1124c8] {
 	background: #333333;
