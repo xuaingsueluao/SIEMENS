@@ -83,7 +83,40 @@ export default {
 	
 	// 新建路线
 	route: {
-		title: 'Neue Route'
+		title: 'Neue Route',
+		mapPlaceholder: 'Kartenbereich',
+		addContent: 'Inhalt hinzufügen',
+		forwardSpeed: 'Vorwärtsgeschwindigkeit',
+		save: 'Speichern',
+		editRouteName: 'Routenname bearbeiten',
+		routeNamePlaceholder: 'Routenname eingeben',
+		contentPlaceholder: 'Erklärungsinhalt eingeben...',
+		defaultRouteName: 'Route 1'
+	},
+	
+	// 讲解内容配置
+	routeContent: {
+		actionTitle: 'Aktion',
+		languageTitle: 'Sprache',
+		voiceTitle: 'Stimmauswahl',
+		actions: {
+			guideRight: 'Rechts führen',
+			guideLeft: 'Links führen',
+			introduceRight: 'Rechts vorstellen',
+			introduceLeft: 'Links vorstellen',
+			welcome: 'Willkommen',
+			auto: 'Automatisch'
+		},
+		languages: {
+			chinese: 'Chinesisch',
+			english: 'Englisch',
+			german: 'Deutsch'
+		},
+		voices: {
+			maleA: 'A (Männlich)',
+			femaleB: 'B (Weiblich)',
+			childC: 'C (Kind)'
+		}
 	},
 	
 	// 人脸识别

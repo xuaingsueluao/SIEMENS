@@ -83,7 +83,40 @@ export default {
 	
 	// 新建路线
 	route: {
-		title: '新建路线'
+		title: '新建路线',
+		mapPlaceholder: '地图区域',
+		addContent: '添加讲解内容',
+		forwardSpeed: '前进速度',
+		save: '保存',
+		editRouteName: '编辑路线名称',
+		routeNamePlaceholder: '请输入路线名称',
+		contentPlaceholder: '请输入讲解内容...',
+		defaultRouteName: '路线1'
+	},
+	
+	// 讲解内容配置
+	routeContent: {
+		actionTitle: '执行动作',
+		languageTitle: '语言',
+		voiceTitle: '声音选择',
+		actions: {
+			guideRight: '向右引导',
+			guideLeft: '向左引导',
+			introduceRight: '向右介绍',
+			introduceLeft: '向左介绍',
+			welcome: '欢迎光临',
+			auto: '自动'
+		},
+		languages: {
+			chinese: '中文',
+			english: '英文',
+			german: '德文'
+		},
+		voices: {
+			maleA: 'A (男声)',
+			femaleB: 'B (女声)',
+			childC: 'C (童声)'
+		}
 	},
 	
 	// 人脸识别

@@ -36,6 +36,13 @@
 			}
 		},
 		{
+			"path": "pages/route/content",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": ""
+			}
+		},
+		{
 			"path": "pages/face/index",
 			"style": {
 				"navigationStyle": "custom",

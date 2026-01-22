@@ -83,7 +83,40 @@ export default {
 	
 	// 新建路线
 	route: {
-		title: 'New Route'
+		title: 'New Route',
+		mapPlaceholder: 'Map Area',
+		addContent: 'Add Content',
+		forwardSpeed: 'Forward Speed',
+		save: 'Save',
+		editRouteName: 'Edit Route Name',
+		routeNamePlaceholder: 'Enter route name',
+		contentPlaceholder: 'Enter explanation content...',
+		defaultRouteName: 'Route 1'
+	},
+	
+	// 讲解内容配置
+	routeContent: {
+		actionTitle: 'Action',
+		languageTitle: 'Language',
+		voiceTitle: 'Voice Selection',
+		actions: {
+			guideRight: 'Guide Right',
+			guideLeft: 'Guide Left',
+			introduceRight: 'Introduce Right',
+			introduceLeft: 'Introduce Left',
+			welcome: 'Welcome',
+			auto: 'Auto'
+		},
+		languages: {
+			chinese: 'Chinese',
+			english: 'English',
+			german: 'German'
+		},
+		voices: {
+			maleA: 'A (Male)',
+			femaleB: 'B (Female)',
+			childC: 'C (Child)'
+		}
 	},
 	
 	// 人脸识别
