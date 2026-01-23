@@ -470,3 +470,103 @@
 	color: #ffffff;
 	font-weight: 600;
 }
+
+/* ==================== 自动内容弹窗 ==================== */
+.auto-modal[data-v-6a1124c8] {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 3000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.auto-modal-content[data-v-6a1124c8] {
+	position: relative;
+	width: 43.75rem;
+	height: 21.875rem;
+}
+.auto-modal-bg[data-v-6a1124c8] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.auto-modal-inner[data-v-6a1124c8] {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 2.8125rem 3.75rem 2.8125rem 3.75rem; 
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+.auto-modal-title[data-v-6a1124c8] {
+	font-size: 1.0625rem;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 0.75rem;
+}
+.auto-modal-textarea[data-v-6a1124c8] {
+	flex: 1;
+	width: 100%;
+	background: #ffffff;
+	border-radius: 0.5rem;
+	padding: 0.75rem;
+	font-size: 0.875rem;
+	color: #333;
+	box-sizing: border-box;
+}
+.auto-modal-actions[data-v-6a1124c8] {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0.625rem;
+}
+.upload-btn[data-v-6a1124c8] {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 0.375rem;
+	padding: 0.5rem 0.875rem;
+	background: #ffffff;
+	border-radius: 0.375rem;
+	transition: all 0.2s ease;
+}
+.upload-btn[data-v-6a1124c8]:active {
+	opacity: 0.8;
+	transform: scale(0.98);
+}
+.upload-icon[data-v-6a1124c8] {
+	width: 1rem;
+	height: 1rem;
+}
+.upload-text[data-v-6a1124c8] {
+	font-size: 0.8125rem;
+	color: #333;
+}
+.auto-modal-confirm[data-v-6a1124c8] {
+	background: #333333;
+	border-radius: 1.25rem;
+	padding: 0.75rem 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	margin-top: 0.75rem;
+}
+.auto-modal-confirm[data-v-6a1124c8]:active {
+	opacity: 0.8;
+	transform: scale(0.98);
+}
+.auto-modal-confirm-text[data-v-6a1124c8] {
+	font-size: 0.9375rem;
+	color: #ffffff;
+	font-weight: 600;
+}

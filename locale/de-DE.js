@@ -99,6 +99,9 @@ export default {
 		actionTitle: 'Aktion',
 		languageTitle: 'Sprache',
 		voiceTitle: 'Stimmauswahl',
+		addContentTitle: 'Inhalt hinzufügen',
+		contentPlaceholder: 'Geben Sie den zu erklärenden Inhalt ein',
+		uploadFile: 'Datei hochladen',
 		actions: {
 			guideRight: 'Rechts führen',
 			guideLeft: 'Links führen',
@@ -121,7 +124,18 @@ export default {
 	
 	// 人脸识别
 	face: {
-		title: 'Gesichtserkennung'
+		title: 'Gesichtserkennung',
+		savedFaces: 'Gespeicherte Gesichtsdaten',
+		uploadPhotos: 'Fotos hochladen',
+		namePlaceholder: 'Name eingeben',
+		upload: 'Hochladen',
+		noMore: 'Keine weiteren Daten',
+		emptyTip: 'Keine gespeicherten Gesichtsdaten',
+		deleteConfirmTitle: 'Löschen bestätigen',
+		deleteConfirmContent: 'Möchten Sie diese Gesichtsdaten wirklich löschen?',
+		pleaseSelectImage: 'Bitte wählen Sie zuerst ein Bild',
+		pleaseEnterName: 'Bitte geben Sie einen Namen ein',
+		noDataToSave: 'Keine Daten zum Speichern'
 	},
 	
 	// 语音设置

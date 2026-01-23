@@ -31,7 +31,7 @@ if (uni.restoreGlobal) {
 }
 (function(vue) {
   "use strict";
-  const _imports_0$7 = "/static/icons/background.jpg";
+  const _imports_0$8 = "/static/icons/background.jpg";
   const _imports_1$1 = "/static/icons/arrow.png";
   const _imports_2 = "/static/icons/house.png";
   const _imports_3 = "/static/icons/operation_Reminder.jpg";
@@ -69,7 +69,7 @@ if (uni.restoreGlobal) {
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
         class: "background",
-        src: _imports_0$7,
+        src: _imports_0$8,
         mode: "aspectFill"
       }),
       vue.createCommentVNode(" 主要内容区域 "),
@@ -3867,7 +3867,7 @@ ${codeFrame}` : message);
     ]);
   }
   const ExpandableCapsule = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$f], ["__scopeId", "data-v-7d677368"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/expandable-capsule.vue"]]);
-  const _imports_0$6 = "/static/icons/home/pop-up.png";
+  const _imports_0$7 = "/static/icons/home/pop-up.png";
   const _sfc_main$f = {
     __name: "tip-modal",
     props: {
@@ -3948,7 +3948,7 @@ ${codeFrame}` : message);
         [
           vue.createElementVNode("image", {
             class: "tip-bg",
-            src: _imports_0$6,
+            src: _imports_0$7,
             mode: "aspectFit"
           }),
           vue.createElementVNode("view", { class: "tip-message-area" }, [
@@ -4180,7 +4180,7 @@ ${codeFrame}` : message);
     );
   }
   const VirtualJoystick = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$d], ["__scopeId", "data-v-c8d8cbb8"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/virtual-joystick.vue"]]);
-  const _imports_0$5 = "/static/icons/home/battery.png";
+  const _imports_0$6 = "/static/icons/home/battery.png";
   const _sfc_main$d = {
     __name: "nav-statusBYClaude",
     setup(__props, { expose: __expose }) {
@@ -4236,7 +4236,7 @@ ${codeFrame}` : message);
           vue.createElementVNode("view", { class: "battery-info" }, [
             vue.createElementVNode("image", {
               class: "battery-icon",
-              src: _imports_0$5,
+              src: _imports_0$6,
               mode: "aspectFit"
             }),
             vue.createElementVNode("text", { class: "battery-percent" }, "100%")
@@ -4246,7 +4246,7 @@ ${codeFrame}` : message);
     ]);
   }
   const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
-  const _imports_0$4 = "/static/icons/home/background.png";
+  const _imports_0$5 = "/static/icons/home/background.png";
   const _imports_1 = "/static/icons/home/location-placeholder.jpg";
   const _sfc_main$c = {
     __name: "home",
@@ -4386,7 +4386,7 @@ ${codeFrame}` : message);
       vue.createCommentVNode(" 背景图 "),
       vue.createElementVNode("image", {
         class: "background",
-        src: _imports_0$4,
+        src: _imports_0$5,
         mode: "aspectFill"
       }),
       vue.createCommentVNode(" 主内容区域 "),
@@ -4677,6 +4677,9 @@ ${codeFrame}` : message);
       actionTitle: "执行动作",
       languageTitle: "语言",
       voiceTitle: "声音选择",
+      addContentTitle: "添加讲解内容",
+      contentPlaceholder: "请输入要讲解的内容",
+      uploadFile: "上传文件",
       actions: {
         guideRight: "向右引导",
         guideLeft: "向左引导",
@@ -4698,7 +4701,18 @@ ${codeFrame}` : message);
     },
     // 人脸识别
     face: {
-      title: "人脸识别"
+      title: "人脸识别",
+      savedFaces: "已保存人脸数据",
+      uploadPhotos: "上传照片",
+      namePlaceholder: "请填写备注",
+      upload: "上传",
+      noMore: "没有更多了",
+      emptyTip: "暂无保存的人脸数据",
+      deleteConfirmTitle: "确认删除",
+      deleteConfirmContent: "确定要删除该人脸数据吗？",
+      pleaseSelectImage: "请先选择图片",
+      pleaseEnterName: "请输入姓名",
+      noDataToSave: "没有可保存的数据"
     },
     // 语音设置
     voice: {
@@ -4815,6 +4829,9 @@ ${codeFrame}` : message);
       actionTitle: "Action",
       languageTitle: "Language",
       voiceTitle: "Voice Selection",
+      addContentTitle: "Add Content",
+      contentPlaceholder: "Enter the content to explain",
+      uploadFile: "Upload File",
       actions: {
         guideRight: "Guide Right",
         guideLeft: "Guide Left",
@@ -4836,7 +4853,18 @@ ${codeFrame}` : message);
     },
     // 人脸识别
     face: {
-      title: "Face Recognition"
+      title: "Face Recognition",
+      savedFaces: "Saved Face Data",
+      uploadPhotos: "Upload Photos",
+      namePlaceholder: "Enter name",
+      upload: "Upload",
+      noMore: "No more data",
+      emptyTip: "No saved face data",
+      deleteConfirmTitle: "Confirm Delete",
+      deleteConfirmContent: "Are you sure to delete this face data?",
+      pleaseSelectImage: "Please select an image first",
+      pleaseEnterName: "Please enter a name",
+      noDataToSave: "No data to save"
     },
     // 语音设置
     voice: {
@@ -4953,6 +4981,9 @@ ${codeFrame}` : message);
       actionTitle: "Aktion",
       languageTitle: "Sprache",
       voiceTitle: "Stimmauswahl",
+      addContentTitle: "Inhalt hinzufügen",
+      contentPlaceholder: "Geben Sie den zu erklärenden Inhalt ein",
+      uploadFile: "Datei hochladen",
       actions: {
         guideRight: "Rechts führen",
         guideLeft: "Links führen",
@@ -4974,7 +5005,18 @@ ${codeFrame}` : message);
     },
     // 人脸识别
     face: {
-      title: "Gesichtserkennung"
+      title: "Gesichtserkennung",
+      savedFaces: "Gespeicherte Gesichtsdaten",
+      uploadPhotos: "Fotos hochladen",
+      namePlaceholder: "Name eingeben",
+      upload: "Hochladen",
+      noMore: "Keine weiteren Daten",
+      emptyTip: "Keine gespeicherten Gesichtsdaten",
+      deleteConfirmTitle: "Löschen bestätigen",
+      deleteConfirmContent: "Möchten Sie diese Gesichtsdaten wirklich löschen?",
+      pleaseSelectImage: "Bitte wählen Sie zuerst ein Bild",
+      pleaseEnterName: "Bitte geben Sie einen Namen ein",
+      noDataToSave: "Keine Daten zum Speichern"
     },
     // 语音设置
     voice: {
@@ -5017,7 +5059,7 @@ ${codeFrame}` : message);
     { code: "en-US", name: "English", nativeName: "English" },
     { code: "de-DE", name: "Deutsch", nativeName: "Deutsch" }
   ];
-  const _imports_0$3 = "/static/icons/general/btn_general_back.svg";
+  const _imports_0$4 = "/static/icons/general/btn_general_back.svg";
   const _sfc_main$b = {
     __name: "common-back-btn",
     props: {
@@ -5050,7 +5092,7 @@ ${codeFrame}` : message);
     }, [
       vue.createElementVNode("image", {
         class: "back-icon",
-        src: _imports_0$3,
+        src: _imports_0$4,
         mode: "widthFix"
       })
     ]);
@@ -5423,7 +5465,7 @@ ${codeFrame}` : message);
     });
   }
   const PagesSettingsIndex = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$8], ["__scopeId", "data-v-a11b3e9a"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/settings/index.vue"]]);
-  const _imports_0$2 = "/static/icons/remote/robot-stand.png";
+  const _imports_0$3 = "/static/icons/remote/robot-stand.png";
   const _sfc_main$8 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
@@ -5481,7 +5523,7 @@ ${codeFrame}` : message);
           vue.createVNode($setup["NavStatus"]),
           vue.createElementVNode("image", {
             class: "robot-avatar",
-            src: _imports_0$2,
+            src: _imports_0$3,
             mode: "aspectFit"
           })
         ])
@@ -5611,7 +5653,7 @@ ${codeFrame}` : message);
     ]);
   }
   const PagesRemoteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$7], ["__scopeId", "data-v-91c9b6da"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/remote/index.vue"]]);
-  const _imports_0$1 = "/static/icons/route/background.jpg";
+  const _imports_0$2 = "/static/icons/route/background.jpg";
   const _sfc_main$7 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
@@ -5670,7 +5712,7 @@ ${codeFrame}` : message);
           vue.createElementVNode("view", { class: "map-area" }, [
             vue.createElementVNode("image", {
               class: "map-image",
-              src: _imports_0$1,
+              src: _imports_0$2,
               mode: "aspectFill"
             })
           ]),
@@ -5816,7 +5858,7 @@ ${codeFrame}` : message);
     });
   }
   const PagesRouteIndex = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$6], ["__scopeId", "data-v-74397b76"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/route/index.vue"]]);
-  const _imports_0 = "/static/icons/general/icon_sound.svg";
+  const _imports_0$1 = "/static/icons/general/icon_sound.svg";
   const _sfc_main$6 = {
     __name: "beautiful-card",
     props: {
@@ -5900,7 +5942,7 @@ ${codeFrame}` : message);
               "image",
               {
                 class: vue.normalizeClass(["play-icon", { "play-icon-active": $props.isPlaying }]),
-                src: _imports_0,
+                src: _imports_0$1,
                 mode: "aspectFit"
               },
               null,
@@ -5917,6 +5959,7 @@ ${codeFrame}` : message);
     );
   }
   const BeautifulCard = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-65026364"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/beautiful-card.vue"]]);
+  const _imports_0 = "/static/icons/general/icon_upload.svg";
   const _sfc_main$5 = {
     __name: "content",
     setup(__props, { expose: __expose }) {
@@ -5949,6 +5992,36 @@ ${codeFrame}` : message);
       const playingVoiceId = vue.ref(null);
       const handleActionSelect = (id) => {
         selectedActionId.value = id;
+        if (id === 6) {
+          isAutoModalVisible.value = true;
+        }
+      };
+      const isAutoModalVisible = vue.ref(false);
+      const autoContentText = vue.ref("");
+      const closeAutoModal = () => {
+        isAutoModalVisible.value = false;
+      };
+      const handleUploadFile = () => {
+        uni.chooseMessageFile({
+          count: 1,
+          type: "file",
+          extension: [".txt", ".doc", ".docx", ".pdf"],
+          success: (res) => {
+            const file = res.tempFiles[0];
+            formatAppLog("log", "at pages/route/content.vue:161", "选择的文件:", file);
+            uni.showToast({
+              title: `已选择: ${file.name}`,
+              icon: "none"
+            });
+          },
+          fail: (err) => {
+            formatAppLog("log", "at pages/route/content.vue:169", "选择文件取消或失败:", err);
+          }
+        });
+      };
+      const confirmAutoContent = () => {
+        formatAppLog("log", "at pages/route/content.vue:176", "自动讲解内容:", autoContentText.value);
+        isAutoModalVisible.value = false;
       };
       const handleLanguageSelect = (id) => {
         selectedLanguageId.value = id;
@@ -5959,7 +6032,7 @@ ${codeFrame}` : message);
       const handlePlayVoice = (id) => {
         const voice = voiceList.value.find((v) => v.id === id);
         if (!voice || !voice.audioSrc) {
-          formatAppLog("warn", "at pages/route/content.vue:127", "未找到音频文件");
+          formatAppLog("warn", "at pages/route/content.vue:195", "未找到音频文件");
           return;
         }
         if (playingVoiceId.value === id && audioContext.value) {
@@ -5977,7 +6050,7 @@ ${codeFrame}` : message);
           playingVoiceId.value = null;
         });
         audioContext.value.onError((err) => {
-          formatAppLog("error", "at pages/route/content.vue:155", "音频播放错误:", err);
+          formatAppLog("error", "at pages/route/content.vue:223", "音频播放错误:", err);
           playingVoiceId.value = null;
           uni.showToast({
             title: "播放失败",
@@ -5992,7 +6065,7 @@ ${codeFrame}` : message);
           audioContext.value.stop();
           audioContext.value.destroy();
         }
-        formatAppLog("log", "at pages/route/content.vue:176", "保存讲解内容配置", {
+        formatAppLog("log", "at pages/route/content.vue:244", "保存讲解内容配置", {
           actionId: selectedActionId.value,
           languageId: selectedLanguageId.value,
           voiceId: selectedVoiceId.value
@@ -6006,7 +6079,7 @@ ${codeFrame}` : message);
           audioContext.value = null;
         }
       });
-      const __returned__ = { t, actionList, selectedActionId, languageList, selectedLanguageId, voiceList, selectedVoiceId, audioContext, playingVoiceId, handleActionSelect, handleLanguageSelect, handleVoiceSelect, handlePlayVoice, handleSave, ref: vue.ref, onUnmounted: vue.onUnmounted, get useI18n() {
+      const __returned__ = { t, actionList, selectedActionId, languageList, selectedLanguageId, voiceList, selectedVoiceId, audioContext, playingVoiceId, handleActionSelect, isAutoModalVisible, autoContentText, closeAutoModal, handleUploadFile, confirmAutoContent, handleLanguageSelect, handleVoiceSelect, handlePlayVoice, handleSave, ref: vue.ref, onUnmounted: vue.onUnmounted, get useI18n() {
         return useI18n;
       }, PageHeader, BeautifulCard };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
@@ -6116,7 +6189,75 @@ ${codeFrame}` : message);
               )
             ])
           ])
-        ])
+        ]),
+        vue.createCommentVNode(" 自动内容弹窗 "),
+        $setup.isAutoModalVisible ? (vue.openBlock(), vue.createElementBlock("view", {
+          key: 0,
+          class: "auto-modal",
+          onClick: $setup.closeAutoModal
+        }, [
+          vue.createElementVNode("view", {
+            class: "auto-modal-content",
+            onClick: _cache[1] || (_cache[1] = vue.withModifiers(() => {
+            }, ["stop"]))
+          }, [
+            vue.createCommentVNode(" 背景图片拉伸填满容器 "),
+            vue.createElementVNode("image", {
+              class: "auto-modal-bg",
+              src: _imports_0$7,
+              mode: "scaleToFill"
+            }),
+            vue.createCommentVNode(" 内容绝对定位在图片上 "),
+            vue.createElementVNode("view", { class: "auto-modal-inner" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "auto-modal-title" },
+                vue.toDisplayString(_ctx.$t("routeContent.addContentTitle")),
+                1
+                /* TEXT */
+              ),
+              vue.withDirectives(vue.createElementVNode("textarea", {
+                class: "auto-modal-textarea",
+                "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => $setup.autoContentText = $event),
+                placeholder: _ctx.$t("routeContent.contentPlaceholder"),
+                maxlength: 2e3
+              }, null, 8, ["placeholder"]), [
+                [vue.vModelText, $setup.autoContentText]
+              ]),
+              vue.createElementVNode("view", { class: "auto-modal-actions" }, [
+                vue.createElementVNode("view", {
+                  class: "upload-btn",
+                  onClick: $setup.handleUploadFile
+                }, [
+                  vue.createElementVNode("image", {
+                    class: "upload-icon",
+                    src: _imports_0,
+                    mode: "aspectFit"
+                  }),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "upload-text" },
+                    vue.toDisplayString(_ctx.$t("routeContent.uploadFile")),
+                    1
+                    /* TEXT */
+                  )
+                ])
+              ]),
+              vue.createElementVNode("view", {
+                class: "auto-modal-confirm",
+                onClick: $setup.confirmAutoContent
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "auto-modal-confirm-text" },
+                  vue.toDisplayString(_ctx.$t("common.confirm")),
+                  1
+                  /* TEXT */
+                )
+              ])
+            ])
+          ])
+        ])) : vue.createCommentVNode("v-if", true)
       ]),
       _: 1
       /* STABLE */
@@ -6127,7 +6268,128 @@ ${codeFrame}` : message);
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
-      const __returned__ = { PageHeader };
+      const { t } = useI18n();
+      const savedFaces = vue.ref([
+        { id: 1, name: "Alex", avatar: "" },
+        { id: 2, name: "Bella", avatar: "" },
+        { id: 3, name: "Chris", avatar: "" },
+        { id: 4, name: "David", avatar: "" },
+        { id: 5, name: "Emily", avatar: "" },
+        { id: 6, name: "Frank", avatar: "" },
+        { id: 7, name: "Grace", avatar: "" },
+        { id: 8, name: "Henry", avatar: "" },
+        { id: 9, name: "Iris", avatar: "" },
+        { id: 10, name: "Jack", avatar: "" },
+        { id: 11, name: "Kate", avatar: "" },
+        { id: 12, name: "Leo", avatar: "" },
+        { id: 13, name: "Mia", avatar: "" },
+        { id: 14, name: "Noah", avatar: "" },
+        { id: 15, name: "Olivia", avatar: "" },
+        { id: 16, name: "Paul", avatar: "" },
+        { id: 17, name: "Quinn", avatar: "" },
+        { id: 18, name: "Ruby", avatar: "" },
+        { id: 19, name: "Sam", avatar: "" },
+        { id: 20, name: "Tom", avatar: "" }
+      ]);
+      const selectedFaceId = vue.ref(null);
+      const uploadSlots = vue.ref([
+        { id: 1, image: null, name: "" },
+        { id: 2, image: null, name: "" },
+        { id: 3, image: null, name: "" },
+        { id: 4, image: null, name: "" }
+      ]);
+      const handleSelectFace = (id) => {
+        selectedFaceId.value = selectedFaceId.value === id ? null : id;
+      };
+      const handleDeleteFace = (id) => {
+        uni.showModal({
+          title: t("face.deleteConfirmTitle"),
+          content: t("face.deleteConfirmContent"),
+          success: (res) => {
+            if (res.confirm) {
+              savedFaces.value = savedFaces.value.filter((f) => f.id !== id);
+              if (selectedFaceId.value === id) {
+                selectedFaceId.value = null;
+              }
+              uni.showToast({
+                title: t("common.success"),
+                icon: "success"
+              });
+            }
+          }
+        });
+      };
+      const handleChooseImage = (slotId) => {
+        uni.chooseImage({
+          count: 1,
+          sizeType: ["compressed"],
+          sourceType: ["album", "camera"],
+          success: (res) => {
+            const slot = uploadSlots.value.find((s) => s.id === slotId);
+            if (slot) {
+              slot.image = res.tempFilePaths[0];
+            }
+          }
+        });
+      };
+      const handleUploadSingle = (slotId) => {
+        const slot = uploadSlots.value.find((s) => s.id === slotId);
+        if (!slot || !slot.image) {
+          uni.showToast({
+            title: t("face.pleaseSelectImage"),
+            icon: "none"
+          });
+          return;
+        }
+        if (!slot.name.trim()) {
+          uni.showToast({
+            title: t("face.pleaseEnterName"),
+            icon: "none"
+          });
+          return;
+        }
+        formatAppLog("log", "at pages/face/index.vue:191", "上传单个人脸:", slot);
+        uni.showToast({
+          title: t("common.success"),
+          icon: "success"
+        });
+        savedFaces.value.push({
+          id: Date.now(),
+          name: slot.name,
+          avatar: slot.image
+        });
+        slot.image = null;
+        slot.name = "";
+      };
+      const handleSaveAll = () => {
+        const filledSlots = uploadSlots.value.filter((s) => s.image && s.name.trim());
+        if (filledSlots.length === 0) {
+          uni.showToast({
+            title: t("face.noDataToSave"),
+            icon: "none"
+          });
+          return;
+        }
+        formatAppLog("log", "at pages/face/index.vue:221", "批量保存人脸:", filledSlots);
+        filledSlots.forEach((slot) => {
+          savedFaces.value.push({
+            id: Date.now() + slot.id,
+            name: slot.name,
+            avatar: slot.image
+          });
+        });
+        uploadSlots.value.forEach((slot) => {
+          slot.image = null;
+          slot.name = "";
+        });
+        uni.showToast({
+          title: t("common.success"),
+          icon: "success"
+        });
+      };
+      const __returned__ = { t, savedFaces, selectedFaceId, uploadSlots, handleSelectFace, handleDeleteFace, handleChooseImage, handleUploadSingle, handleSaveAll, ref: vue.ref, get useI18n() {
+        return useI18n;
+      }, PageHeader };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -6135,16 +6397,182 @@ ${codeFrame}` : message);
   function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "faceRecognition" }, {
       default: vue.withCtx(() => [
-        vue.createElementVNode("view", { class: "page-content" }, [
-          vue.createCommentVNode(" 人脸识别内容 "),
-          vue.createElementVNode("view", { class: "content-card" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "placeholder-text" },
-              vue.toDisplayString(_ctx.$t("face.title")),
-              1
-              /* TEXT */
-            )
+        vue.createElementVNode("view", { class: "face-container" }, [
+          vue.createCommentVNode(" 左侧 - 已保存人脸数据 "),
+          vue.createElementVNode("view", { class: "saved-panel" }, [
+            vue.createElementVNode("view", { class: "panel-header" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "panel-title" },
+                vue.toDisplayString(_ctx.$t("face.savedFaces")),
+                1
+                /* TEXT */
+              )
+            ]),
+            vue.createElementVNode("scroll-view", {
+              class: "face-grid-scroll",
+              "scroll-y": "",
+              "show-scrollbar": true,
+              enhanced: true,
+              bounces: true
+            }, [
+              vue.createElementVNode("view", { class: "face-grid" }, [
+                (vue.openBlock(true), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList($setup.savedFaces, (face) => {
+                    return vue.openBlock(), vue.createElementBlock("view", {
+                      key: face.id,
+                      class: vue.normalizeClass(["face-card", { "face-card-selected": $setup.selectedFaceId === face.id }]),
+                      onClick: ($event) => $setup.handleSelectFace(face.id)
+                    }, [
+                      vue.createElementVNode("view", { class: "face-avatar-wrapper" }, [
+                        face.avatar ? (vue.openBlock(), vue.createElementBlock("image", {
+                          key: 0,
+                          class: "face-avatar",
+                          src: face.avatar,
+                          mode: "aspectFill"
+                        }, null, 8, ["src"])) : (vue.openBlock(), vue.createElementBlock("view", {
+                          key: 1,
+                          class: "face-avatar-placeholder"
+                        }, [
+                          vue.createElementVNode(
+                            "text",
+                            { class: "face-avatar-letter" },
+                            vue.toDisplayString(face.name.charAt(0).toUpperCase()),
+                            1
+                            /* TEXT */
+                          )
+                        ]))
+                      ]),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "face-name" },
+                        vue.toDisplayString(face.name),
+                        1
+                        /* TEXT */
+                      ),
+                      vue.createElementVNode("view", {
+                        class: "face-delete-btn",
+                        onClick: vue.withModifiers(($event) => $setup.handleDeleteFace(face.id), ["stop"])
+                      }, [
+                        vue.createElementVNode(
+                          "text",
+                          { class: "face-delete-text" },
+                          vue.toDisplayString(_ctx.$t("common.delete")),
+                          1
+                          /* TEXT */
+                        )
+                      ], 8, ["onClick"])
+                    ], 10, ["onClick"]);
+                  }),
+                  128
+                  /* KEYED_FRAGMENT */
+                ))
+              ]),
+              $setup.savedFaces.length > 0 ? (vue.openBlock(), vue.createElementBlock("view", {
+                key: 0,
+                class: "no-more"
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "no-more-text" },
+                  vue.toDisplayString(_ctx.$t("face.noMore")),
+                  1
+                  /* TEXT */
+                )
+              ])) : (vue.openBlock(), vue.createElementBlock("view", {
+                key: 1,
+                class: "empty-tip"
+              }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "empty-tip-text" },
+                  vue.toDisplayString(_ctx.$t("face.emptyTip")),
+                  1
+                  /* TEXT */
+                )
+              ]))
+            ])
+          ]),
+          vue.createCommentVNode(" 右侧 - 上传照片 "),
+          vue.createElementVNode("view", { class: "upload-panel" }, [
+            vue.createElementVNode("view", { class: "panel-header" }, [
+              vue.createElementVNode(
+                "text",
+                { class: "panel-title" },
+                vue.toDisplayString(_ctx.$t("face.uploadPhotos")),
+                1
+                /* TEXT */
+              )
+            ]),
+            vue.createElementVNode("view", { class: "upload-grid" }, [
+              (vue.openBlock(true), vue.createElementBlock(
+                vue.Fragment,
+                null,
+                vue.renderList($setup.uploadSlots, (slot) => {
+                  return vue.openBlock(), vue.createElementBlock("view", {
+                    key: slot.id,
+                    class: "upload-slot"
+                  }, [
+                    vue.createCommentVNode(" 图片预览或上传区域 "),
+                    vue.createElementVNode("view", {
+                      class: vue.normalizeClass(["upload-area", { "upload-area-filled": slot.image }]),
+                      onClick: ($event) => $setup.handleChooseImage(slot.id)
+                    }, [
+                      slot.image ? (vue.openBlock(), vue.createElementBlock("image", {
+                        key: 0,
+                        class: "upload-preview",
+                        src: slot.image,
+                        mode: "aspectFill"
+                      }, null, 8, ["src"])) : (vue.openBlock(), vue.createElementBlock("view", {
+                        key: 1,
+                        class: "upload-placeholder"
+                      }, [
+                        vue.createElementVNode("text", { class: "upload-plus" }, "+")
+                      ]))
+                    ], 10, ["onClick"]),
+                    vue.createCommentVNode(" 名称输入 "),
+                    vue.withDirectives(vue.createElementVNode("input", {
+                      class: "upload-name-input",
+                      "onUpdate:modelValue": ($event) => slot.name = $event,
+                      placeholder: _ctx.$t("face.namePlaceholder")
+                    }, null, 8, ["onUpdate:modelValue", "placeholder"]), [
+                      [vue.vModelText, slot.name]
+                    ]),
+                    vue.createCommentVNode(" 上传按钮 "),
+                    vue.createElementVNode("view", {
+                      class: "upload-btn",
+                      onClick: ($event) => $setup.handleUploadSingle(slot.id)
+                    }, [
+                      vue.createElementVNode("image", {
+                        class: "upload-btn-icon",
+                        src: _imports_0,
+                        mode: "aspectFit"
+                      }),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "upload-btn-text" },
+                        vue.toDisplayString(_ctx.$t("face.upload")),
+                        1
+                        /* TEXT */
+                      )
+                    ], 8, ["onClick"])
+                  ]);
+                }),
+                128
+                /* KEYED_FRAGMENT */
+              ))
+            ]),
+            vue.createCommentVNode(" 保存按钮 "),
+            vue.createElementVNode("view", { class: "save-btn-area" }, [
+              vue.createElementVNode("view", {
+                class: "save-btn",
+                onClick: $setup.handleSaveAll
+              }, [
+                vue.createElementVNode("text", { class: "save-btn-text" }, "Save")
+              ])
+            ])
           ])
         ])
       ]),

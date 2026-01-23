@@ -99,6 +99,9 @@ export default {
 		actionTitle: '执行动作',
 		languageTitle: '语言',
 		voiceTitle: '声音选择',
+		addContentTitle: '添加讲解内容',
+		contentPlaceholder: '请输入要讲解的内容',
+		uploadFile: '上传文件',
 		actions: {
 			guideRight: '向右引导',
 			guideLeft: '向左引导',
@@ -121,7 +124,18 @@ export default {
 	
 	// 人脸识别
 	face: {
-		title: '人脸识别'
+		title: '人脸识别',
+		savedFaces: '已保存人脸数据',
+		uploadPhotos: '上传照片',
+		namePlaceholder: '请填写备注',
+		upload: '上传',
+		noMore: '没有更多了',
+		emptyTip: '暂无保存的人脸数据',
+		deleteConfirmTitle: '确认删除',
+		deleteConfirmContent: '确定要删除该人脸数据吗？',
+		pleaseSelectImage: '请先选择图片',
+		pleaseEnterName: '请输入姓名',
+		noDataToSave: '没有可保存的数据'
 	},
 	
 	// 语音设置

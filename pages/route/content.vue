@@ -56,6 +56,33 @@
 				</view>
 			</view>
 		</view>
+		
+		<!-- 自动内容弹窗 -->
+		<view class="auto-modal" v-if="isAutoModalVisible" @click="closeAutoModal">
+			<view class="auto-modal-content" @click.stop>
+				<!-- 背景图片拉伸填满容器 -->
+				<image class="auto-modal-bg" src="/static/icons/home/pop-up.png" mode="scaleToFill"></image>
+				<!-- 内容绝对定位在图片上 -->
+				<view class="auto-modal-inner">
+					<text class="auto-modal-title">{{ $t('routeContent.addContentTitle') }}</text>
+					<textarea 
+						class="auto-modal-textarea"
+						v-model="autoContentText"
+						:placeholder="$t('routeContent.contentPlaceholder')"
+						:maxlength="2000"
+					/>
+					<view class="auto-modal-actions">
+						<view class="upload-btn" @click="handleUploadFile">
+							<image class="upload-icon" src="/static/icons/general/icon_upload.svg" mode="aspectFit" />
+							<text class="upload-text">{{ $t('routeContent.uploadFile') }}</text>
+						</view>
+					</view>
+					<view class="auto-modal-confirm" @click="confirmAutoContent">
+						<text class="auto-modal-confirm-text">{{ $t('common.confirm') }}</text>
+					</view>
+				</view>
+			</view>
+		</view>
 	</PageHeader>
 </template>
 
@@ -108,6 +135,47 @@ const playingVoiceId = ref(null)
 // 选择动作
 const handleActionSelect = (id) => {
 	selectedActionId.value = id
+	// 如果选择了"自动"，弹出内容输入框
+	if (id === 6) {
+		isAutoModalVisible.value = true
+	}
+}
+
+// 自动内容弹窗相关
+const isAutoModalVisible = ref(false)
+const autoContentText = ref('')
+
+// 关闭自动内容弹窗
+const closeAutoModal = () => {
+	isAutoModalVisible.value = false
+}
+
+// 上传文件
+const handleUploadFile = () => {
+	uni.chooseMessageFile({
+		count: 1,
+		type: 'file',
+		extension: ['.txt', '.doc', '.docx', '.pdf'],
+		success: (res) => {
+			const file = res.tempFiles[0]
+			console.log('选择的文件:', file)
+			// TODO: 处理文件上传逻辑
+			uni.showToast({
+				title: `已选择: ${file.name}`,
+				icon: 'none'
+			})
+		},
+		fail: (err) => {
+			console.log('选择文件取消或失败:', err)
+		}
+	})
+}
+
+// 确认自动内容
+const confirmAutoContent = () => {
+	console.log('自动讲解内容:', autoContentText.value)
+	// TODO: 保存自动内容
+	isAutoModalVisible.value = false
 }
 
 // 选择语言
@@ -267,6 +335,119 @@ onUnmounted(() => {
 }
 
 .save-btn-text {
+	font-size: 30rpx;
+	color: #ffffff;
+	font-weight: 600;
+}
+
+/* ==================== 自动内容弹窗 ==================== */
+.auto-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	z-index: 3000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.auto-modal-content {
+	position: relative;
+	width: 1400rpx;
+	height: 700rpx;
+}
+
+.auto-modal-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.auto-modal-inner {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 90rpx 120rpx 90rpx 120rpx; 
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.auto-modal-title {
+	font-size: 34rpx;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+	margin-bottom: 24rpx;
+}
+
+.auto-modal-textarea {
+	flex: 1;
+	width: 100%;
+	background: #ffffff;
+	border-radius: 16rpx;
+	padding: 24rpx;
+	font-size: 28rpx;
+	color: #333;
+	box-sizing: border-box;
+}
+
+.auto-modal-actions {
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 20rpx;
+}
+
+.upload-btn {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 12rpx;
+	padding: 16rpx 28rpx;
+	background: #ffffff;
+	border-radius: 12rpx;
+	transition: all 0.2s ease;
+}
+
+.upload-btn:active {
+	opacity: 0.8;
+	transform: scale(0.98);
+}
+
+.upload-icon {
+	width: 32rpx;
+	height: 32rpx;
+}
+
+.upload-text {
+	font-size: 26rpx;
+	color: #333;
+}
+
+.auto-modal-confirm {
+	background: #333333;
+	border-radius: 40rpx;
+	padding: 24rpx 80rpx;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-self: center;
+	margin-top: 24rpx;
+}
+
+.auto-modal-confirm:active {
+	opacity: 0.8;
+	transform: scale(0.98);
+}
+
+.auto-modal-confirm-text {
 	font-size: 30rpx;
 	color: #ffffff;
 	font-weight: 600;

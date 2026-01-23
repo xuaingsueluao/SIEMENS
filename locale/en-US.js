@@ -99,6 +99,9 @@ export default {
 		actionTitle: 'Action',
 		languageTitle: 'Language',
 		voiceTitle: 'Voice Selection',
+		addContentTitle: 'Add Content',
+		contentPlaceholder: 'Enter the content to explain',
+		uploadFile: 'Upload File',
 		actions: {
 			guideRight: 'Guide Right',
 			guideLeft: 'Guide Left',
@@ -121,7 +124,18 @@ export default {
 	
 	// 人脸识别
 	face: {
-		title: 'Face Recognition'
+		title: 'Face Recognition',
+		savedFaces: 'Saved Face Data',
+		uploadPhotos: 'Upload Photos',
+		namePlaceholder: 'Enter name',
+		upload: 'Upload',
+		noMore: 'No more data',
+		emptyTip: 'No saved face data',
+		deleteConfirmTitle: 'Confirm Delete',
+		deleteConfirmContent: 'Are you sure to delete this face data?',
+		pleaseSelectImage: 'Please select an image first',
+		pleaseEnterName: 'Please enter a name',
+		noDataToSave: 'No data to save'
 	},
 	
 	// 语音设置
