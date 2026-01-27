@@ -42,7 +42,9 @@ export default {
 		shutdown: 'Shutdown Robot',
 		robotPerspective: 'Robot View',
 		selectRouteTitle: 'Select Route',
-		batteryStatus: 'Battery'
+		batteryStatus: 'Battery',
+		noRouteAvailable: 'No routes available\nPlease go to "New Route"',
+		routeSelected: 'You have selected {routeName}'
 	},
 	
 	// 设置
@@ -140,7 +142,27 @@ export default {
 	
 	// 语音设置
 	voice: {
-		title: 'Voice Settings'
+		title: 'Voice Settings',
+		characterSettings: 'Character Settings',
+		voiceSelect: 'Voice Selection',
+		voiceA: 'A (Male)',
+		voiceB: 'B (Female)',
+		voiceC: 'C (Child)',
+		replyContent: 'Reply Content & Knowledge Base',
+		llmSelect: 'LLM Selection',
+		qaKnowledgeBase: 'Q&A Knowledge Base',
+		enabled: 'Enabled',
+		disabled: 'Disabled',
+		clickUpload: 'Upload',
+		uploadedKnowledge: 'Uploaded Knowledge Base',
+		uploadTip1: 'Re-uploading will overwrite the old knowledge base',
+		uploadTip2: 'To delete, please upload an empty document (.txt format)',
+		uploadTip3: 'Maximum knowledge base size: 4096 characters',
+		voiceRecognition: 'Voice Recognition Log',
+		connectionStatus: 'Connection Status',
+		connected: 'Connected',
+		disconnected: 'Disconnected',
+		robot: 'Robot'
 	},
 	
 	// 建图和导航

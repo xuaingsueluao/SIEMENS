@@ -282,6 +282,7 @@ const handleDeviceSelect = (deviceName) => {
 	font-weight: 700;
 	color: rgba(0, 0, 0, 0.66);
 	letter-spacing: 0.5rpx;
+	margin-left: 90rpx;
 }
 
 /* 音源选择：按钮白色 */

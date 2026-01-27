@@ -12,8 +12,9 @@
  *   - type: 弹窗类型 ('info' 纯提示 | 'confirm' 确认选择)
  *   - confirmText: 确定按钮文字（默认"确定"）
  *   - cancelText: 取消按钮文字（默认"取消"）
- *   - width: 弹窗宽度（默认"600rpx"）
- *   - minHeight: 弹窗最小高度（默认"400rpx"）
+ *   - width: 弹窗宽度（默认"1170rpx"）
+ *   - minHeight: 弹窗最小高度（默认"754rpx"）
+ *   - padding: 内容区域内边距（默认"52rpx 52rpx"）
  * 
  * Events:
  *   - confirm: 点击确定按钮时触发
@@ -25,14 +26,14 @@
 	<view class="tip-modal" v-if="visible" @click="handleClose">
 		<view class="tip-content" :style="contentStyle" @click.stop>
 			<image class="tip-bg" src="/static/icons/home/pop-up.png" mode="aspectFit"></image>
-			<view class="tip-message-area">
+			<view class="tip-message-area" :style="messageAreaStyle">
 				<text class="tip-message">{{ message }}</text>
 				<view class="tip-buttons" v-if="type === 'confirm'">
-					<view class="tip-btn tip-btn-cancel" @click="handleCancel">
-						<text class="tip-btn-text">{{ cancelText }}</text>
-					</view>
 					<view class="tip-btn tip-btn-confirm" @click="handleConfirm">
 						<text class="tip-btn-text">{{ confirmText }}</text>
+					</view>
+					<view class="tip-btn tip-btn-cancel" @click="handleCancel">
+						<text class="tip-btn-text">{{ cancelText }}</text>
 					</view>
 				</view>
 			</view>
@@ -74,12 +75,17 @@ const props = defineProps({
 	// 弹窗宽度
 	width: {
 		type: String,
-		default: '600rpx'
+		default: '1170rpx'
 	},
 	// 弹窗最小高度
 	minHeight: {
 		type: String,
-		default: '400rpx'
+		default: '754rpx'
+	},
+	// 内容区域内边距
+	padding: {
+		type: String,
+		default: '52rpx 52rpx'
 	}
 })
 
@@ -90,6 +96,11 @@ const emit = defineEmits(['confirm', 'cancel', 'close'])
 const contentStyle = computed(() => ({
 	width: props.width,
 	minHeight: props.minHeight
+}))
+
+// 内容区域样式
+const messageAreaStyle = computed(() => ({
+	padding: props.padding
 }))
 
 // 关闭弹窗
@@ -128,6 +139,7 @@ const handleCancel = () => {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	box-sizing: border-box;
 }
 
 .tip-bg {
@@ -143,7 +155,6 @@ const handleCancel = () => {
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	padding: 60rpx 40rpx;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

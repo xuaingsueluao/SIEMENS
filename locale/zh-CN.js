@@ -42,7 +42,9 @@ export default {
 		shutdown: '关闭机器人',
 		robotPerspective: '机器人视角',
 		selectRouteTitle: '选择路线',
-		batteryStatus: '电量'
+		batteryStatus: '电量',
+		noRouteAvailable: '无可用路线\n请前往"新建路线"',
+		routeSelected: '您已经选择{routeName}'
 	},
 	
 	// 设置
@@ -140,7 +142,27 @@ export default {
 	
 	// 语音设置
 	voice: {
-		title: '语音设置'
+		title: '语音设置',
+		characterSettings: '人物设定',
+		voiceSelect: '音色选择',
+		voiceA: 'A (男声)',
+		voiceB: 'B (女声)',
+		voiceC: 'C (童声)',
+		replyContent: '回复内容&知识库',
+		llmSelect: '大语言模型选择',
+		qaKnowledgeBase: 'Q&A知识库',
+		enabled: '已开启',
+		disabled: '已关闭',
+		clickUpload: '点击上传',
+		uploadedKnowledge: '已上传知识库',
+		uploadTip1: '重新上传会覆盖旧知识库',
+		uploadTip2: '删除知识库请上传空文档(请上传".txt"格式文档)',
+		uploadTip3: '知识库最大字数为4096字',
+		voiceRecognition: '语音识别记录',
+		connectionStatus: '连接状态',
+		connected: '已连接',
+		disconnected: '未连接',
+		robot: '机器人'
 	},
 	
 	// 建图和导航

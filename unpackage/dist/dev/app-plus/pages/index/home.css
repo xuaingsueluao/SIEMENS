@@ -116,6 +116,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	box-sizing: border-box;
 }
 .tip-bg[data-v-d8c96405] {
 	position: absolute;
@@ -129,7 +130,6 @@
 	position: relative;
 	z-index: 1;
 	width: 100%;
-	padding: 1.875rem 1.25rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;

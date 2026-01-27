@@ -132,8 +132,6 @@
 			:visible="isCenterTipVisible"
 			:message="centerTipMessage"
 			:type="centerTipType"
-			width="900rpx"
-			minHeight="520rpx"
 			@close="closeCenterTip"
 			@cancel="closeCenterTip"
 			@confirm="goToNewRoute"
@@ -167,11 +165,12 @@ const centerTipMessage = ref('')
 const centerTipType = ref('info') // 'info' 或 'confirm'
 
 // 路线列表（模拟数据）
-const routes = ref([
-	{ id: 1, name: '路线1' },
-	{ id: 2, name: '路线2' },
-	{ id: 3, name: '路线3' }
-])
+// const routes = ref([
+// 	{ id: 1, name: '路线1' },
+// 	{ id: 2, name: '路线2' },
+// 	{ id: 3, name: '路线3' }
+// ])
+const routes = ref([])
 
 // 当前选中的路线
 const selectedRoute = ref(null)
@@ -212,7 +211,7 @@ const closeCenterTip = () => {
 const selectRoute = (route) => {
 	selectedRoute.value = route
 	// 显示选择成功提示
-	showCenterTip(`您已经选择${route.name}`)
+	showCenterTip(t('home.routeSelected', { routeName: route.name }))
 	// 更新左侧按钮文字
 	const routeBtn = sideButtons.value.find(b => b.action === 'select-route')
 	if (routeBtn) {
@@ -325,7 +324,7 @@ const handleSideButtonClick = (btn) => {
 		// 选择路线：检查是否有路线
 		if (routes.value.length === 0) {
 			// 没有路线，显示提示
-			showCenterTip('无可用路线请前往新建路线', 'confirm')
+			showCenterTip(t('home.noRouteAvailable'), 'confirm')
 		} else {
 			// 有路线，打开右侧边栏
 			openRouteSidebar()

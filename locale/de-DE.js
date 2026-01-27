@@ -42,7 +42,9 @@ export default {
 		shutdown: 'Ausschalten',
 		robotPerspective: 'Roboter-Ansicht',
 		selectRouteTitle: 'Route wählen',
-		batteryStatus: 'Ladestand'
+		batteryStatus: 'Ladestand',
+		noRouteAvailable: 'Keine Routen verfügbar\nBitte gehen Sie zu "Neue Route"',
+		routeSelected: 'Sie haben {routeName} ausgewählt'
 	},
 	
 	// 设置
@@ -140,7 +142,27 @@ export default {
 	
 	// 语音设置
 	voice: {
-		title: 'Spracheinstellungen'
+		title: 'Spracheinstellungen',
+		characterSettings: 'Charakter-Einstellungen',
+		voiceSelect: 'Stimmauswahl',
+		voiceA: 'A (Männlich)',
+		voiceB: 'B (Weiblich)',
+		voiceC: 'C (Kind)',
+		replyContent: 'Antwortinhalt & Wissensdatenbank',
+		llmSelect: 'LLM Auswahl',
+		qaKnowledgeBase: 'Q&A Wissensdatenbank',
+		enabled: 'Aktiviert',
+		disabled: 'Deaktiviert',
+		clickUpload: 'Hochladen',
+		uploadedKnowledge: 'Hochgeladene Wissensdatenbank',
+		uploadTip1: 'Erneutes Hochladen überschreibt die alte Wissensdatenbank',
+		uploadTip2: 'Zum Löschen bitte ein leeres Dokument hochladen (.txt Format)',
+		uploadTip3: 'Maximale Zeichenanzahl der Wissensdatenbank: 4096 Zeichen',
+		voiceRecognition: 'Sprach-Log',
+		connectionStatus: 'Verbindung',
+		connected: 'Verbunden',
+		disconnected: 'Nicht verbunden',
+		robot: 'Roboter'
 	},
 	
 	// 建图和导航

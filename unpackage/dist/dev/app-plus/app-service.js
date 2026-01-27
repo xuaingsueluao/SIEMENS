@@ -32,9 +32,9 @@ if (uni.restoreGlobal) {
 (function(vue) {
   "use strict";
   const _imports_0$8 = "/static/icons/background.jpg";
-  const _imports_1$1 = "/static/icons/arrow.png";
-  const _imports_2 = "/static/icons/house.png";
-  const _imports_3 = "/static/icons/operation_Reminder.jpg";
+  const _imports_1$2 = "/static/icons/arrow.png";
+  const _imports_2$1 = "/static/icons/house.png";
+  const _imports_3$1 = "/static/icons/operation_Reminder.jpg";
   const _export_sfc = (sfc, props) => {
     const target = sfc.__vccOpts || sfc;
     for (const [key, val] of props) {
@@ -103,12 +103,12 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("view", { class: "house-container" }, [
             vue.createElementVNode("image", {
               class: "arrow",
-              src: _imports_1$1,
+              src: _imports_1$2,
               mode: "aspectFit"
             }),
             vue.createElementVNode("image", {
               class: "house",
-              src: _imports_2,
+              src: _imports_2$1,
               mode: "aspectFit"
             })
           ])
@@ -164,7 +164,7 @@ if (uni.restoreGlobal) {
           vue.createElementVNode("view", { class: "reminder-content" }, [
             vue.createElementVNode("image", {
               class: "reminder-image",
-              src: _imports_3,
+              src: _imports_3$1,
               mode: "aspectFit"
             }),
             vue.createElementVNode("view", { class: "reminder-text" }, [
@@ -3900,12 +3900,17 @@ ${codeFrame}` : message);
       // 弹窗宽度
       width: {
         type: String,
-        default: "600rpx"
+        default: "1170rpx"
       },
       // 弹窗最小高度
       minHeight: {
         type: String,
-        default: "400rpx"
+        default: "754rpx"
+      },
+      // 内容区域内边距
+      padding: {
+        type: String,
+        default: "52rpx 52rpx"
       }
     },
     emits: ["confirm", "cancel", "close"],
@@ -3917,6 +3922,9 @@ ${codeFrame}` : message);
         width: props.width,
         minHeight: props.minHeight
       }));
+      const messageAreaStyle = vue.computed(() => ({
+        padding: props.padding
+      }));
       const handleClose = () => {
         emit("close");
       };
@@ -3926,7 +3934,7 @@ ${codeFrame}` : message);
       const handleCancel = () => {
         emit("cancel");
       };
-      const __returned__ = { props, emit, contentStyle, handleClose, handleConfirm, handleCancel, computed: vue.computed };
+      const __returned__ = { props, emit, contentStyle, messageAreaStyle, handleClose, handleConfirm, handleCancel, computed: vue.computed };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -3951,44 +3959,53 @@ ${codeFrame}` : message);
             src: _imports_0$7,
             mode: "aspectFit"
           }),
-          vue.createElementVNode("view", { class: "tip-message-area" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "tip-message" },
-              vue.toDisplayString($props.message),
-              1
-              /* TEXT */
-            ),
-            $props.type === "confirm" ? (vue.openBlock(), vue.createElementBlock("view", {
-              key: 0,
-              class: "tip-buttons"
-            }, [
-              vue.createElementVNode("view", {
-                class: "tip-btn tip-btn-cancel",
-                onClick: $setup.handleCancel
+          vue.createElementVNode(
+            "view",
+            {
+              class: "tip-message-area",
+              style: vue.normalizeStyle($setup.messageAreaStyle)
+            },
+            [
+              vue.createElementVNode(
+                "text",
+                { class: "tip-message" },
+                vue.toDisplayString($props.message),
+                1
+                /* TEXT */
+              ),
+              $props.type === "confirm" ? (vue.openBlock(), vue.createElementBlock("view", {
+                key: 0,
+                class: "tip-buttons"
               }, [
-                vue.createElementVNode(
-                  "text",
-                  { class: "tip-btn-text" },
-                  vue.toDisplayString($props.cancelText),
-                  1
-                  /* TEXT */
-                )
-              ]),
-              vue.createElementVNode("view", {
-                class: "tip-btn tip-btn-confirm",
-                onClick: $setup.handleConfirm
-              }, [
-                vue.createElementVNode(
-                  "text",
-                  { class: "tip-btn-text" },
-                  vue.toDisplayString($props.confirmText),
-                  1
-                  /* TEXT */
-                )
-              ])
-            ])) : vue.createCommentVNode("v-if", true)
-          ])
+                vue.createElementVNode("view", {
+                  class: "tip-btn tip-btn-confirm",
+                  onClick: $setup.handleConfirm
+                }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "tip-btn-text" },
+                    vue.toDisplayString($props.confirmText),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode("view", {
+                  class: "tip-btn tip-btn-cancel",
+                  onClick: $setup.handleCancel
+                }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "tip-btn-text" },
+                    vue.toDisplayString($props.cancelText),
+                    1
+                    /* TEXT */
+                  )
+                ])
+              ])) : vue.createCommentVNode("v-if", true)
+            ],
+            4
+            /* STYLE */
+          )
         ],
         4
         /* STYLE */
@@ -4247,7 +4264,7 @@ ${codeFrame}` : message);
   }
   const NavStatus = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$c], ["__scopeId", "data-v-a8e2f413"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/navigation/nav-statusBYClaude.vue"]]);
   const _imports_0$5 = "/static/icons/home/background.png";
-  const _imports_1 = "/static/icons/home/location-placeholder.jpg";
+  const _imports_1$1 = "/static/icons/home/location-placeholder.jpg";
   const _sfc_main$c = {
     __name: "home",
     setup(__props, { expose: __expose }) {
@@ -4259,11 +4276,7 @@ ${codeFrame}` : message);
       const isCenterTipVisible = vue.ref(false);
       const centerTipMessage = vue.ref("");
       const centerTipType = vue.ref("info");
-      const routes = vue.ref([
-        { id: 1, name: "路线1" },
-        { id: 2, name: "路线2" },
-        { id: 3, name: "路线3" }
-      ]);
+      const routes = vue.ref([]);
       const selectedRoute = vue.ref(null);
       const openOperationModal = () => {
         isOperationModalVisible.value = true;
@@ -4287,7 +4300,7 @@ ${codeFrame}` : message);
       };
       const selectRoute = (route) => {
         selectedRoute.value = route;
-        showCenterTip(`您已经选择${route.name}`);
+        showCenterTip(t("home.routeSelected", { routeName: route.name }));
         const routeBtn = sideButtons.value.find((b) => b.action === "select-route");
         if (routeBtn) {
           routeBtn.text = route.name;
@@ -4303,7 +4316,7 @@ ${codeFrame}` : message);
       };
       const onVolumeChange = (e) => {
         volume.value = e.detail.value;
-        formatAppLog("log", "at pages/index/home.vue:237", "音量调整为:", volume.value);
+        formatAppLog("log", "at pages/index/home.vue:236", "音量调整为:", volume.value);
       };
       const throttleDir = vue.ref("stop");
       const yawDir = vue.ref("stop");
@@ -4320,7 +4333,7 @@ ${codeFrame}` : message);
           throttle: throttleDir.value,
           yaw: yawDir.value
         };
-        formatAppLog("log", "at pages/index/home.vue:262", "定位指令:", command);
+        formatAppLog("log", "at pages/index/home.vue:261", "定位指令:", command);
       };
       const topButtonsConfig = vue.ref([
         { key: "settings", isActive: false, route: "/pages/settings/index" },
@@ -4367,12 +4380,12 @@ ${codeFrame}` : message);
           openOperationModal();
         } else if (btn.action === "select-route") {
           if (routes.value.length === 0) {
-            showCenterTip("无可用路线请前往新建路线", "confirm");
+            showCenterTip(t("home.noRouteAvailable"), "confirm");
           } else {
             openRouteSidebar();
           }
         }
-        formatAppLog("log", "at pages/index/home.vue:336", "执行动作:", btn.action);
+        formatAppLog("log", "at pages/index/home.vue:335", "执行动作:", btn.action);
       };
       const __returned__ = { t, volume, isOperationModalVisible, isRouteSidebarVisible, isCenterTipVisible, centerTipMessage, centerTipType, routes, selectedRoute, openOperationModal, closeOperationModal, openRouteSidebar, closeRouteSidebar, showCenterTip, closeCenterTip, selectRoute, goToNewRoute, onVolumeChange, throttleDir, yawDir, onThrottleChange, onYawChange, sendPositionCommand, topButtonsConfig, topButtons, sideButtonsConfig, sideButtons, handleTopButtonClick, handleSideButtonClick, ref: vue.ref, computed: vue.computed, get useI18n() {
         return useI18n;
@@ -4493,7 +4506,7 @@ ${codeFrame}` : message);
           vue.createElementVNode("view", { class: "operation-image-wrapper" }, [
             vue.createElementVNode("image", {
               class: "operation-image",
-              src: _imports_1,
+              src: _imports_1$1,
               mode: "aspectFill"
             }),
             vue.createCommentVNode(" 左侧摇杆：控制前后 "),
@@ -4574,8 +4587,6 @@ ${codeFrame}` : message);
         visible: $setup.isCenterTipVisible,
         message: $setup.centerTipMessage,
         type: $setup.centerTipType,
-        width: "900rpx",
-        minHeight: "520rpx",
         onClose: $setup.closeCenterTip,
         onCancel: $setup.closeCenterTip,
         onConfirm: $setup.goToNewRoute
@@ -4624,7 +4635,9 @@ ${codeFrame}` : message);
       shutdown: "关闭机器人",
       robotPerspective: "机器人视角",
       selectRouteTitle: "选择路线",
-      batteryStatus: "电量"
+      batteryStatus: "电量",
+      noRouteAvailable: '无可用路线\n请前往"新建路线"',
+      routeSelected: "您已经选择{routeName}"
     },
     // 设置
     settings: {
@@ -4716,7 +4729,27 @@ ${codeFrame}` : message);
     },
     // 语音设置
     voice: {
-      title: "语音设置"
+      title: "语音设置",
+      characterSettings: "人物设定",
+      voiceSelect: "音色选择",
+      voiceA: "A (男声)",
+      voiceB: "B (女声)",
+      voiceC: "C (童声)",
+      replyContent: "回复内容&知识库",
+      llmSelect: "大语言模型选择",
+      qaKnowledgeBase: "Q&A知识库",
+      enabled: "已开启",
+      disabled: "已关闭",
+      clickUpload: "点击上传",
+      uploadedKnowledge: "已上传知识库",
+      uploadTip1: "重新上传会覆盖旧知识库",
+      uploadTip2: '删除知识库请上传空文档(请上传".txt"格式文档)',
+      uploadTip3: "知识库最大字数为4096字",
+      voiceRecognition: "语音识别记录",
+      connectionStatus: "连接状态",
+      connected: "已连接",
+      disconnected: "未连接",
+      robot: "机器人"
     },
     // 建图和导航
     mapping: {
@@ -4776,7 +4809,9 @@ ${codeFrame}` : message);
       shutdown: "Shutdown Robot",
       robotPerspective: "Robot View",
       selectRouteTitle: "Select Route",
-      batteryStatus: "Battery"
+      batteryStatus: "Battery",
+      noRouteAvailable: 'No routes available\nPlease go to "New Route"',
+      routeSelected: "You have selected {routeName}"
     },
     // 设置
     settings: {
@@ -4868,7 +4903,27 @@ ${codeFrame}` : message);
     },
     // 语音设置
     voice: {
-      title: "Voice Settings"
+      title: "Voice Settings",
+      characterSettings: "Character Settings",
+      voiceSelect: "Voice Selection",
+      voiceA: "A (Male)",
+      voiceB: "B (Female)",
+      voiceC: "C (Child)",
+      replyContent: "Reply Content & Knowledge Base",
+      llmSelect: "LLM Selection",
+      qaKnowledgeBase: "Q&A Knowledge Base",
+      enabled: "Enabled",
+      disabled: "Disabled",
+      clickUpload: "Upload",
+      uploadedKnowledge: "Uploaded Knowledge Base",
+      uploadTip1: "Re-uploading will overwrite the old knowledge base",
+      uploadTip2: "To delete, please upload an empty document (.txt format)",
+      uploadTip3: "Maximum knowledge base size: 4096 characters",
+      voiceRecognition: "Voice Recognition Log",
+      connectionStatus: "Connection Status",
+      connected: "Connected",
+      disconnected: "Disconnected",
+      robot: "Robot"
     },
     // 建图和导航
     mapping: {
@@ -4928,7 +4983,9 @@ ${codeFrame}` : message);
       shutdown: "Ausschalten",
       robotPerspective: "Roboter-Ansicht",
       selectRouteTitle: "Route wählen",
-      batteryStatus: "Ladestand"
+      batteryStatus: "Ladestand",
+      noRouteAvailable: 'Keine Routen verfügbar\nBitte gehen Sie zu "Neue Route"',
+      routeSelected: "Sie haben {routeName} ausgewählt"
     },
     // 设置
     settings: {
@@ -5020,7 +5077,27 @@ ${codeFrame}` : message);
     },
     // 语音设置
     voice: {
-      title: "Spracheinstellungen"
+      title: "Spracheinstellungen",
+      characterSettings: "Charakter-Einstellungen",
+      voiceSelect: "Stimmauswahl",
+      voiceA: "A (Männlich)",
+      voiceB: "B (Weiblich)",
+      voiceC: "C (Kind)",
+      replyContent: "Antwortinhalt & Wissensdatenbank",
+      llmSelect: "LLM Auswahl",
+      qaKnowledgeBase: "Q&A Wissensdatenbank",
+      enabled: "Aktiviert",
+      disabled: "Deaktiviert",
+      clickUpload: "Hochladen",
+      uploadedKnowledge: "Hochgeladene Wissensdatenbank",
+      uploadTip1: "Erneutes Hochladen überschreibt die alte Wissensdatenbank",
+      uploadTip2: "Zum Löschen bitte ein leeres Dokument hochladen (.txt Format)",
+      uploadTip3: "Maximale Zeichenanzahl der Wissensdatenbank: 4096 Zeichen",
+      voiceRecognition: "Sprach-Log",
+      connectionStatus: "Verbindung",
+      connected: "Verbunden",
+      disconnected: "Nicht verbunden",
+      robot: "Roboter"
     },
     // 建图和导航
     mapping: {
@@ -5959,7 +6036,7 @@ ${codeFrame}` : message);
     );
   }
   const BeautifulCard = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render$5], ["__scopeId", "data-v-65026364"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/components/ui-box/beautiful-card.vue"]]);
-  const _imports_0 = "/static/icons/general/icon_upload.svg";
+  const _imports_1 = "/static/icons/general/icon_upload.svg";
   const _sfc_main$5 = {
     __name: "content",
     setup(__props, { expose: __expose }) {
@@ -6231,7 +6308,7 @@ ${codeFrame}` : message);
                 }, [
                   vue.createElementVNode("image", {
                     class: "upload-icon",
-                    src: _imports_0,
+                    src: _imports_1,
                     mode: "aspectFit"
                   }),
                   vue.createElementVNode(
@@ -6547,7 +6624,7 @@ ${codeFrame}` : message);
                     }, [
                       vue.createElementVNode("image", {
                         class: "upload-btn-icon",
-                        src: _imports_0,
+                        src: _imports_1,
                         mode: "aspectFit"
                       }),
                       vue.createElementVNode(
@@ -6581,11 +6658,100 @@ ${codeFrame}` : message);
     });
   }
   const PagesFaceIndex = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-da7cfd14"], ["__file", "C:/wzl/HX-proj/SIEMENS/SIEMENS/pages/face/index.vue"]]);
+  const _imports_0 = "/static/icons/general/icon_arrow_down.svg";
+  const _imports_2 = "/static/icons/general/icon_file.svg";
+  const _imports_3 = "/static/icons/general/icon-warning.svg";
+  const _imports_4 = "/static/icons/voice/robot-stand-xxhdpi.webp";
   const _sfc_main$3 = {
     __name: "index",
     setup(__props, { expose: __expose }) {
       __expose();
-      const __returned__ = { PageHeader };
+      const { t } = useI18n();
+      const selectedVoice = vue.ref("B");
+      const showVoiceDropdown = vue.ref(false);
+      const voiceOptions = vue.computed(() => [
+        { id: "A", name: t("voice.voiceA") },
+        { id: "B", name: t("voice.voiceB") },
+        { id: "C", name: t("voice.voiceC") }
+      ]);
+      const currentVoiceText = vue.computed(() => {
+        const voice = voiceOptions.value.find((v) => v.id === selectedVoice.value);
+        return voice ? voice.name : "";
+      });
+      const toggleVoiceDropdown = () => {
+        showVoiceDropdown.value = !showVoiceDropdown.value;
+        showLLMDropdown.value = false;
+      };
+      const selectVoice = (id) => {
+        selectedVoice.value = id;
+        showVoiceDropdown.value = false;
+      };
+      const selectedLLM = vue.ref("tongyi");
+      const showLLMDropdown = vue.ref(false);
+      const llmOptions = [
+        { id: "tongyi", name: "通义千问" },
+        { id: "deepseek", name: "DeepSeek" },
+        { id: "chatgpt", name: "ChatGPT" }
+      ];
+      const currentLLMText = vue.computed(() => {
+        const llm = llmOptions.find((l) => l.id === selectedLLM.value);
+        return llm ? llm.name : "";
+      });
+      const toggleLLMDropdown = () => {
+        showLLMDropdown.value = !showLLMDropdown.value;
+        showVoiceDropdown.value = false;
+      };
+      const selectLLM = (id) => {
+        selectedLLM.value = id;
+        showLLMDropdown.value = false;
+      };
+      const qaEnabled = vue.ref(true);
+      const toggleQA = () => {
+        qaEnabled.value = !qaEnabled.value;
+      };
+      const handleUpload = () => {
+        uni.showToast({
+          title: "上传功能开发中",
+          icon: "none"
+        });
+      };
+      const isConnected = vue.ref(true);
+      const scrollTop = vue.ref(0);
+      const chatMessages = vue.ref([
+        {
+          type: "robot",
+          content: '大家好我是西门子智能机器人，我叫"小西"',
+          time: "2025.11.30  12:30:55"
+        },
+        {
+          type: "user",
+          content: "下面的环节带领大家参观的3个地方",
+          time: ""
+        },
+        {
+          type: "robot",
+          content: '大家好我是西门子智能机器人，我叫"小西"',
+          time: "2025.11.30  12:30:55"
+        },
+        {
+          type: "user",
+          content: "下面的环节带领大家参观的3个地方",
+          time: ""
+        },
+        {
+          type: "robot",
+          content: '大家好我是西门子智能机器人，我叫"小西"',
+          time: "2025.11.30  12:30:55"
+        },
+        {
+          type: "user",
+          content: "我",
+          time: ""
+        }
+      ]);
+      const __returned__ = { t, selectedVoice, showVoiceDropdown, voiceOptions, currentVoiceText, toggleVoiceDropdown, selectVoice, selectedLLM, showLLMDropdown, llmOptions, currentLLMText, toggleLLMDropdown, selectLLM, qaEnabled, toggleQA, handleUpload, isConnected, scrollTop, chatMessages, ref: vue.ref, computed: vue.computed, get useI18n() {
+        return useI18n;
+      }, PageHeader };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -6594,15 +6760,369 @@ ${codeFrame}` : message);
     return vue.openBlock(), vue.createBlock($setup["PageHeader"], { activeKey: "voiceSettings" }, {
       default: vue.withCtx(() => [
         vue.createElementVNode("view", { class: "page-content" }, [
-          vue.createCommentVNode(" 语音设置内容 "),
-          vue.createElementVNode("view", { class: "content-card" }, [
-            vue.createElementVNode(
-              "text",
-              { class: "placeholder-text" },
-              vue.toDisplayString(_ctx.$t("voice.title")),
-              1
-              /* TEXT */
-            )
+          vue.createCommentVNode(" 语音设置主卡片 "),
+          vue.createElementVNode("view", { class: "voice-card" }, [
+            vue.createCommentVNode(" 左侧配置区域 "),
+            vue.createElementVNode("view", { class: "left-config-area" }, [
+              vue.createCommentVNode(" 人物设定 - 音色选择 "),
+              vue.createElementVNode("view", { class: "config-section" }, [
+                vue.createElementVNode("view", { class: "section-header" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "section-title" },
+                    vue.toDisplayString(_ctx.$t("voice.characterSettings")),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode("view", { class: "section-content" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "config-label" },
+                    vue.toDisplayString(_ctx.$t("voice.voiceSelect")),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode("view", {
+                    class: "dropdown-select",
+                    onClick: $setup.toggleVoiceDropdown
+                  }, [
+                    vue.createElementVNode(
+                      "text",
+                      { class: "dropdown-text" },
+                      vue.toDisplayString($setup.currentVoiceText),
+                      1
+                      /* TEXT */
+                    ),
+                    vue.createElementVNode(
+                      "image",
+                      {
+                        class: vue.normalizeClass(["dropdown-arrow", { "arrow-up": $setup.showVoiceDropdown }]),
+                        src: _imports_0,
+                        mode: "aspectFit"
+                      },
+                      null,
+                      2
+                      /* CLASS */
+                    )
+                  ]),
+                  vue.createCommentVNode(" 下拉选项 "),
+                  $setup.showVoiceDropdown ? (vue.openBlock(), vue.createElementBlock("view", {
+                    key: 0,
+                    class: "dropdown-options"
+                  }, [
+                    (vue.openBlock(true), vue.createElementBlock(
+                      vue.Fragment,
+                      null,
+                      vue.renderList($setup.voiceOptions, (voice) => {
+                        return vue.openBlock(), vue.createElementBlock("view", {
+                          key: voice.id,
+                          class: vue.normalizeClass(["dropdown-option", { "option-selected": $setup.selectedVoice === voice.id }]),
+                          onClick: ($event) => $setup.selectVoice(voice.id)
+                        }, [
+                          vue.createElementVNode(
+                            "text",
+                            null,
+                            vue.toDisplayString(voice.name),
+                            1
+                            /* TEXT */
+                          )
+                        ], 10, ["onClick"]);
+                      }),
+                      128
+                      /* KEYED_FRAGMENT */
+                    ))
+                  ])) : vue.createCommentVNode("v-if", true)
+                ])
+              ]),
+              vue.createCommentVNode(" 回复内容&知识库 "),
+              vue.createElementVNode("view", { class: "config-section knowledge-section" }, [
+                vue.createElementVNode("view", { class: "section-header" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "section-title" },
+                    vue.toDisplayString(_ctx.$t("voice.replyContent")),
+                    1
+                    /* TEXT */
+                  )
+                ]),
+                vue.createElementVNode("view", { class: "section-content" }, [
+                  vue.createCommentVNode(" 大语言模型选择 "),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "config-label" },
+                    vue.toDisplayString(_ctx.$t("voice.llmSelect")),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode("view", {
+                    class: "dropdown-select",
+                    onClick: $setup.toggleLLMDropdown
+                  }, [
+                    vue.createElementVNode(
+                      "text",
+                      { class: "dropdown-text" },
+                      vue.toDisplayString($setup.currentLLMText),
+                      1
+                      /* TEXT */
+                    ),
+                    vue.createElementVNode(
+                      "image",
+                      {
+                        class: vue.normalizeClass(["dropdown-arrow", { "arrow-up": $setup.showLLMDropdown }]),
+                        src: _imports_0,
+                        mode: "aspectFit"
+                      },
+                      null,
+                      2
+                      /* CLASS */
+                    )
+                  ]),
+                  vue.createCommentVNode(" 下拉选项 "),
+                  $setup.showLLMDropdown ? (vue.openBlock(), vue.createElementBlock("view", {
+                    key: 0,
+                    class: "dropdown-options"
+                  }, [
+                    (vue.openBlock(), vue.createElementBlock(
+                      vue.Fragment,
+                      null,
+                      vue.renderList($setup.llmOptions, (llm) => {
+                        return vue.createElementVNode("view", {
+                          key: llm.id,
+                          class: vue.normalizeClass(["dropdown-option", { "option-selected": $setup.selectedLLM === llm.id }]),
+                          onClick: ($event) => $setup.selectLLM(llm.id)
+                        }, [
+                          vue.createElementVNode(
+                            "text",
+                            null,
+                            vue.toDisplayString(llm.name),
+                            1
+                            /* TEXT */
+                          )
+                        ], 10, ["onClick"]);
+                      }),
+                      64
+                      /* STABLE_FRAGMENT */
+                    ))
+                  ])) : vue.createCommentVNode("v-if", true),
+                  vue.createCommentVNode(" Q&A知识库 "),
+                  vue.createElementVNode("view", { class: "knowledge-base-row" }, [
+                    vue.createElementVNode(
+                      "text",
+                      { class: "config-label" },
+                      vue.toDisplayString(_ctx.$t("voice.qaKnowledgeBase")),
+                      1
+                      /* TEXT */
+                    ),
+                    vue.createElementVNode("view", { class: "toggle-upload-group" }, [
+                      vue.createElementVNode(
+                        "view",
+                        {
+                          class: vue.normalizeClass(["toggle-switch", { "toggle-on": $setup.qaEnabled }]),
+                          onClick: $setup.toggleQA
+                        },
+                        [
+                          vue.createElementVNode("view", { class: "toggle-thumb" }),
+                          vue.createElementVNode(
+                            "text",
+                            { class: "toggle-text" },
+                            vue.toDisplayString($setup.qaEnabled ? _ctx.$t("voice.enabled") : _ctx.$t("voice.disabled")),
+                            1
+                            /* TEXT */
+                          )
+                        ],
+                        2
+                        /* CLASS */
+                      ),
+                      vue.createElementVNode("view", {
+                        class: "upload-btn",
+                        onClick: $setup.handleUpload
+                      }, [
+                        vue.createElementVNode("image", {
+                          class: "upload-icon",
+                          src: _imports_1,
+                          mode: "aspectFit"
+                        }),
+                        vue.createElementVNode(
+                          "text",
+                          null,
+                          vue.toDisplayString(_ctx.$t("voice.clickUpload")),
+                          1
+                          /* TEXT */
+                        )
+                      ])
+                    ])
+                  ]),
+                  vue.createCommentVNode(" 知识库列表 "),
+                  vue.createElementVNode("view", { class: "knowledge-list" }, [
+                    vue.createElementVNode("view", { class: "knowledge-item" }, [
+                      vue.createElementVNode("image", {
+                        class: "file-icon",
+                        src: _imports_2,
+                        mode: "aspectFit"
+                      }),
+                      vue.createElementVNode(
+                        "text",
+                        { class: "file-name" },
+                        vue.toDisplayString(_ctx.$t("voice.uploadedKnowledge")),
+                        1
+                        /* TEXT */
+                      )
+                    ]),
+                    vue.createElementVNode("view", { class: "knowledge-tips" }, [
+                      vue.createElementVNode("view", { class: "tip-row" }, [
+                        vue.createElementVNode("image", {
+                          class: "warning-icon",
+                          src: _imports_3,
+                          mode: "aspectFit"
+                        }),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "tip-text" },
+                          vue.toDisplayString(_ctx.$t("voice.uploadTip1")),
+                          1
+                          /* TEXT */
+                        )
+                      ]),
+                      vue.createElementVNode("view", { class: "tip-row" }, [
+                        vue.createElementVNode("image", {
+                          class: "warning-icon",
+                          src: _imports_3,
+                          mode: "aspectFit"
+                        }),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "tip-text" },
+                          vue.toDisplayString(_ctx.$t("voice.uploadTip2")),
+                          1
+                          /* TEXT */
+                        )
+                      ]),
+                      vue.createElementVNode("view", { class: "tip-row" }, [
+                        vue.createElementVNode("image", {
+                          class: "warning-icon",
+                          src: _imports_3,
+                          mode: "aspectFit"
+                        }),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "tip-text" },
+                          vue.toDisplayString(_ctx.$t("voice.uploadTip3")),
+                          1
+                          /* TEXT */
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ])
+            ]),
+            vue.createCommentVNode(" 中间机器人图片 "),
+            vue.createElementVNode("view", { class: "robot-area" }, [
+              vue.createElementVNode("image", {
+                class: "robot-image",
+                src: _imports_4,
+                mode: "heightFix"
+              })
+            ]),
+            vue.createCommentVNode(" 右侧语音识别记录 "),
+            vue.createElementVNode("view", { class: "chat-area" }, [
+              vue.createElementVNode("view", { class: "chat-header" }, [
+                vue.createElementVNode(
+                  "text",
+                  { class: "chat-title" },
+                  vue.toDisplayString(_ctx.$t("voice.voiceRecognition")),
+                  1
+                  /* TEXT */
+                ),
+                vue.createElementVNode("view", { class: "connection-status" }, [
+                  vue.createElementVNode(
+                    "text",
+                    { class: "status-text" },
+                    vue.toDisplayString(_ctx.$t("voice.connectionStatus")),
+                    1
+                    /* TEXT */
+                  ),
+                  vue.createElementVNode(
+                    "view",
+                    {
+                      class: vue.normalizeClass(["status-dot", { "connected": $setup.isConnected }])
+                    },
+                    null,
+                    2
+                    /* CLASS */
+                  ),
+                  vue.createElementVNode(
+                    "text",
+                    { class: "status-label" },
+                    vue.toDisplayString($setup.isConnected ? _ctx.$t("voice.connected") : _ctx.$t("voice.disconnected")),
+                    1
+                    /* TEXT */
+                  )
+                ])
+              ]),
+              vue.createElementVNode("scroll-view", {
+                class: "chat-messages",
+                "scroll-y": "",
+                "scroll-top": $setup.scrollTop
+              }, [
+                (vue.openBlock(true), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList($setup.chatMessages, (msg, index) => {
+                    return vue.openBlock(), vue.createElementBlock(
+                      "view",
+                      {
+                        key: index,
+                        class: vue.normalizeClass(["message-item", { "message-robot": msg.type === "robot", "message-user": msg.type === "user" }])
+                      },
+                      [
+                        msg.type === "robot" ? (vue.openBlock(), vue.createElementBlock("view", {
+                          key: 0,
+                          class: "message-sender"
+                        }, [
+                          vue.createElementVNode(
+                            "text",
+                            { class: "sender-name" },
+                            vue.toDisplayString(_ctx.$t("voice.robot")),
+                            1
+                            /* TEXT */
+                          )
+                        ])) : vue.createCommentVNode("v-if", true),
+                        vue.createElementVNode(
+                          "view",
+                          {
+                            class: vue.normalizeClass(["message-bubble", { "bubble-robot": msg.type === "robot", "bubble-user": msg.type === "user" }])
+                          },
+                          [
+                            vue.createElementVNode(
+                              "text",
+                              { class: "message-text" },
+                              vue.toDisplayString(msg.content),
+                              1
+                              /* TEXT */
+                            )
+                          ],
+                          2
+                          /* CLASS */
+                        ),
+                        vue.createElementVNode(
+                          "text",
+                          { class: "message-time" },
+                          vue.toDisplayString(msg.time),
+                          1
+                          /* TEXT */
+                        )
+                      ],
+                      2
+                      /* CLASS */
+                    );
+                  }),
+                  128
+                  /* KEYED_FRAGMENT */
+                ))
+              ], 8, ["scroll-top"])
+            ])
           ])
         ])
       ]),

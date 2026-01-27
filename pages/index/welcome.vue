@@ -165,8 +165,8 @@ const confirmReminder = () => {
 
 .arrow {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: -28%;
+	left: 15%;
 	width: 180rpx;
 	height: 240rpx;
 	z-index: 2;
